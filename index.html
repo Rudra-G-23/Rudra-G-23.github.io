@@ -154,9 +154,9 @@
     <header id="about" class="section-container pt-32 pb-16">
         <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
             <img 
-                src="https://picsum.photos/seed/rudra/200/200" 
-                alt="Rudra Prasad Bhuyan" 
-                class="w-32 h-32 rounded-lg object-cover border border-zinc-200 grayscale hover:grayscale-0 transition-all"
+                src="assets/profile-pic.jpeg"
+                alt="Rudra Prasad Bhuyan"
+                class="w-32 h-32 rounded-lg object-cover border border-zinc-200"
             />
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Rudra Prasad Bhuyan</h1>
@@ -166,7 +166,7 @@
         
         <div class="max-w-xl text-zinc-600 leading-relaxed mb-8">
             <p class="mb-4">
-                Electrical engineering background. Self-learned data science practitioner building end-to-end machine learning systems under real-world constraints (8GB RAM environments).
+                Electrical engineering background. Self-learned data science practitioner building end-to-end machine learning systems under real-world constraints.
             </p>
             <p>
                 Focused on practical, system thinking solutions — not just models. I solve real problems using data.
@@ -174,65 +174,74 @@
         </div>
 
         <div class="flex flex-wrap gap-4">
-            <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md hover:bg-zinc-800 transition-colors font-medium">
+
+            <!-- Resume -->
+            <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link" 
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i data-lucide="file-text" size="20"></i> Resume
             </a>
-            <a href="https://github.com/Rudra-G-23" target="_blank" class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md hover:bg-zinc-50 transition-colors font-medium">
+
+            <!-- GitHub -->
+            <a href="https://github.com/Rudra-G-23" 
+            target="_blank"
+            class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i data-lucide="github" size="20"></i> GitHub
             </a>
-            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank" class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md hover:bg-zinc-50 transition-colors font-medium">
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" 
+            target="_blank"
+            class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i data-lucide="linkedin" size="20"></i> LinkedIn
             </a>
+
         </div>
     </header>
 
     <!-- Skills Section -->
     <section id="skills" class="section-container border-t border-zinc-100">
         <span class="label">Skills & Expertise</span>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="skill-box">
-                <h3 class="font-bold text-zinc-900 mb-3 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                    Programming
-                </h3>
-                <ul class="space-y-1">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Python</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>SQL</li>
-                </ul>
+
+        <div class="space-y-2">
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">Languages:</span>
+                <span class="text-zinc-600"> Python, SQL</span>
             </div>
-            <div class="skill-box">
-                <h3 class="font-bold text-zinc-900 mb-3 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                    Data Processing
-                </h3>
-                <ul class="space-y-1">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Pandas (EDA, transformation, cleaning)</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Polars (memory-efficient processing under 8GB constraints)</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Feature engineering (encoding, scaling, skew handling)</li>
-                </ul>
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">Data Analysis Framework:</span>
+                <span class="text-zinc-600"> Pandas, Numpy</span>
             </div>
-            <div class="skill-box">
-                <h3 class="font-bold text-zinc-900 mb-3 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                    Machine Learning
-                </h3>
-                <ul class="space-y-1">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Regression & Classification models</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Model evaluation (R², MAE, MSE, Accuracy)</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Cross-validation & handling imbalanced data</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Basic hyperparameter tuning</li>
-                </ul>
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">Visualization:</span>
+                <span class="text-zinc-600"> Matplotlib, Seaborn, Plotly</span>
             </div>
-            <div class="skill-box">
-                <h3 class="font-bold text-zinc-900 mb-3 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                    Tools
-                </h3>
-                <ul class="space-y-1">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Git / Version Control</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5">•</span>Jupyter Notebook / VS Code</li>
-                </ul>
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">ML Frameworks:</span>
+                <span class="text-zinc-600"> PyTorch, TensorFlow, Scikit-learn, XGBoost</span>
             </div>
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">MLOps & Tools:</span>
+                <span class="text-zinc-600"> Docker, MLflow, Git, FastAPI</span>
+            </div>
+
+            <!--
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">Generative AI & NLP:</span>
+                <span class="text-zinc-600"> Hugging Face, LangChain, RAG, LLMs</span>
+            </div>
+
+            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                <span class="font-bold text-zinc-900">Cloud & Data:</span>
+                <span class="text-zinc-600"> AWS (SageMaker), GCP, Databricks, Spark</span>
+            </div>
+            -->
+
         </div>
     </section>
 
@@ -240,44 +249,51 @@
     <section id="experience" class="section-container border-t border-zinc-100">
         <span class="label">Work Experience</span>
         <div class="space-y-12">
+
+            <!--SBC Lab-->
             <div class="group">
                 <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-                    <h3 class="text-xl font-bold">Data Science Intern <span class="text-accent">@</span> Tech Solutions Inc.</h3>
-                    <span class="font-mono text-sm text-zinc-400">Jan 2024 - Present</span>
+                    <h3 class="text-xl font-bold">Junior Data Scientist Intern <span class="text-accent">@</span> SBC Labs</h3>
+                    <span class="font-mono text-sm text-zinc-400">Nov 2025 - Feb 2026</span>
                 </div>
                 <ul class="space-y-2 mb-4">
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
                         <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Developed predictive models for customer churn using XGBoost and Random Forest.
+                        Developed a structured data analysis framework using Python to analyze an India-level open-source dataset with 400+ features, identifying high-impact variables and reducing feature redundancy.                    </li>
+                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
+                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        Optimized data quality through extensive data cleaning and preprocessing in Python, transforming messy raw data into model-ready datasets and improving downstream analytics efficiency.                    </li>
+                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
+                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        Built a state-level interactive dashboard using Python visualization libraries, enabling focused insights for one state and improving decision-making clarity for stakeholders.                    </li>
+                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
+                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        Improved team understanding by creating a comprehensive Feature Requirement & Documentation Sheet, reducing dataset confusion and standardizing feature interpretation across the team.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
                         <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Optimized data pipelines reducing processing time by 40% using Polars.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Conducted EDA on datasets exceeding 5GB in memory-constrained environments.
-                    </li>
+                        Collaborated with technical and non-technical members by delivering structured weekly reports and translating complex data findings into actionable insights, enabling informed project decisions.                    </li>
                 </ul>
             </div>
 
+            <!--Tata Power-->
             <div class="group">
                 <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-                    <h3 class="text-xl font-bold">Junior ML Engineer <span class="text-accent">@</span> DataFlow Systems</h3>
-                    <span class="font-mono text-sm text-zinc-400">June 2023 - Dec 2023</span>
+                    <h3 class="text-xl font-bold">Electrical Engineering Intern <span class="text-accent">@</span> Tata Power</h3>
+                    <span class="font-mono text-sm text-zinc-400">June 2025 - July 2025</span>
                 </div>
                 <ul class="space-y-2 mb-4">
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
                         <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Implemented automated feature engineering scripts for time-series forecasting.
+                        Gained hands-on exposure to electricity distribution operations, including smart meter functionality, maintenance workflows, and field service processes.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
                         <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Performed rigorous model validation and hyperparameter tuning.
+                        Observed and analyzed the end-to-end digital complaint management system, including online application handling, user request processing, and new connection workflows.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
                         <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Assisted in the deployment of models using Docker and basic CI/CD.
+                        Understood field-to-system integration where service updates and on-site photographic evidence were recorded and synchronized within Tata Power’s internal operations platform.
                     </li>
                 </ul>
             </div>
@@ -288,24 +304,51 @@
     <section id="opensource" class="section-container border-t border-zinc-100">
         <span class="label">Open Source</span>
         <div class="space-y-6">
+
+            <!-- show-file-tree -->
             <div class="bucket">
-                <h3 class="text-xl font-bold mb-2">pydatasys</h3>
-                <p class="text-zinc-600 mb-6">A lightweight Python package for automated feature engineering in memory-constrained environments.</p>
+                <h3 class="text-xl font-bold mb-2">show-file-tree</h3>
+                <p class="text-zinc-600 mb-6">
+                    A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.
+                </p>
                 <div class="flex gap-4">
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">PyPI <i data-lucide="external-link" size="14"></i></a>
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">Docs <i data-lucide="external-link" size="14"></i></a>
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">GitHub <i data-lucide="external-link" size="14"></i></a>
+                    <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        PyPI <i data-lucide="external-link" size="14"></i>
+                    </a>
+                    <a href="https://rudra-g-23.github.io/show-file-tree/" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        Docs <i data-lucide="external-link" size="14"></i>
+                    </a>
+                    <a href="https://github.com/Rudra-G-23/show-file-tree" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        GitHub <i data-lucide="external-link" size="14"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- find-my-joint -->
             <div class="bucket">
-                <h3 class="text-xl font-bold mb-2">ml-ops-lite</h3>
-                <p class="text-zinc-600 mb-6">Minimalist MLOps toolkit designed for tracking experiments and deploying models on low-resource hardware.</p>
+                <h3 class="text-xl font-bold mb-2">find-my-joint</h3>
+                <p class="text-zinc-600 mb-6">
+                    A utility to find potential join keys (matching columns) across multiple pandas DataFrames.
+                </p>
                 <div class="flex gap-4">
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">PyPI <i data-lucide="external-link" size="14"></i></a>
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">Docs <i data-lucide="external-link" size="14"></i></a>
-                    <a href="#" class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">GitHub <i data-lucide="external-link" size="14"></i></a>
+                    <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        PyPI <i data-lucide="external-link" size="14"></i>
+                    </a>
+                    <a href="https://rudra-g-23.github.io/Find-My-Joint/" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        Docs <i data-lucide="external-link" size="14"></i>
+                    </a>
+                    <a href="https://github.com/Rudra-G-23/Find-My-Joint" target="_blank"
+                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        GitHub <i data-lucide="external-link" size="14"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -313,61 +356,105 @@
     <section id="projects" class="section-container border-t border-zinc-100">
         <span class="label">Featured Projects</span>
         <div class="space-y-8">
+
             <!-- Project 1 -->
             <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">Real Estate Price Predictor</h3>
+                <h3 class="text-xl font-bold mb-3">SQL Modern Data Warehouse</h3>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">High variance in property valuation across urban areas leading to investment risks.</p>
+                    <p class="text-zinc-700">Raw ERP & CRM sales data was scattered in CSV files, inconsistent, and not analytics-ready for business reporting.</p>
                 </div>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, Scikit-Learn, Pandas, Matplotlib</p>
+                    <p class="text-zinc-600 text-sm">PostgreSQL, SQL (ETL), Star Schema Modeling, EDA, Power BI</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Built a regression model with 92% R² score.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Handled missing data and outliers in a dataset of 50k+ entries.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Built a 3-layer Medallion architecture (Bronze–Silver–Gold) in PostgreSQL, transforming raw CSV data into analytics-ready tables.
+                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Developed end-to-end ETL pipelines using SQL, integrating ERP & CRM data into a scalable star schema model.
+                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Optimized business reporting by creating analytical views and SQL reports for customer behavior, product performance, and sales trends.
+                    </li>
                 </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
+
+                <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" 
+                target="_blank"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                View Project 
+                <i data-lucide="external-link" size="14"></i>
+                </a>
+
             </div>
 
             <!-- Project 2 -->
             <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">Credit Risk Assessment</h3>
+                <h3 class="text-xl font-bold mb-3">Yelp Big Data Capstone</h3>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">Traditional scoring methods failing to account for non-traditional financial behaviors.</p>
+                    <p class="text-zinc-700">Traditional tools like Pandas struggle with large Yelp JSON datasets due to memory and performance limitations.</p>
                 </div>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, XGBoost, SQL, Seaborn</p>
+                    <p class="text-zinc-600 text-sm">Python, Polars, JSON, Parquet, Jupyter Notebook</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Reduced false negatives by 15% compared to baseline models.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Engineered 20+ new features from raw transaction logs.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Built a high-performance data processing pipeline using Polars, handling large Yelp JSON files efficiently without memory bottlenecks.
+                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Optimized storage and I/O by converting raw JSON data into Parquet format, improving processing speed and scalability.
+                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Developed step-by-step analytical workflows (filtering, groupby, joins, rolling ops) to extract structured insights from large-scale business data.
+                    </li>
                 </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
+                <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" 
+                target="_blank"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                View Project 
+                <i data-lucide="external-link" size="14"></i>
+                </a>
             </div>
 
             <!-- Project 3 -->
             <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">Inventory Optimization System</h3>
+                <h3 class="text-xl font-bold mb-3">Breast Cancer Prediction App</h3>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">Overstocking and stockouts causing significant revenue loss for small retailers.</p>
+                    <p class="text-zinc-700">Need for an interactive, real-time diagnostic tool to predict whether a tumor is benign or malignant using medical imaging features.</p>
                 </div>
                 <div class="mb-4">
                     <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, Polars, Statsmodels</p>
+                    <p class="text-zinc-600 text-sm">Python, Scikit-learn (Logistic Regression), Streamlit, Pandas, Plotly</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Developed a demand forecasting system using ARIMA.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Designed for 8GB RAM environments using memory-efficient structures.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Built an end-to-end ML pipeline using Logistic Regression (Scikit-learn) for tumor classification based on 30 diagnostic features.
+                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2">
+                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
+                        Developed a real-time web application in Streamlit, delivering instant predictions with probability confidence scores.
+                    </li>
                 </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
+                <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" 
+                target="_blank"
+                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                View Project 
+                <i data-lucide="external-link" size="14"></i>
+                </a>
             </div>
-
-            <!-- Project 4 -->
+            
+        <!--
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">Customer Segmentation Engine</h3>
                 <div class="mb-4">
@@ -385,7 +472,7 @@
                 <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
             </div>
 
-            <!-- Project 5 -->
+
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">Anomaly Detection in Sensors</h3>
                 <div class="mb-4">
@@ -403,7 +490,7 @@
                 <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
             </div>
 
-            <!-- Project 6 -->
+
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">NLP Sentiment Analyzer</h3>
                 <div class="mb-4">
@@ -420,6 +507,8 @@
                 </ul>
                 <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
             </div>
+        -->
+
         </div>
         <div class="mt-12 text-center">
             <a href="https://github.com/Rudra-G-23/Data-Science-Projects-Portflio" target="_blank" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-all font-bold shadow-lg hover:shadow-blue-500/20 group">
