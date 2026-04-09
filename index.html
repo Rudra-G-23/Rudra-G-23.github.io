@@ -4,78 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rudra Prasad Bhuyan | Data Scientist Portfolio</title>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Font Awesome (covers UI icons + brand icons: GitHub, LinkedIn, Kaggle) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
+        /* ─── CSS Variables ─────────────────────────── */
         :root {
             --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
             --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
             --color-accent: #2563eb;
         }
 
+        /* ─── Base ──────────────────────────────────── */
         body {
             font-family: var(--font-sans);
             background-color: white;
-            color: #18181b; /* zinc-900 */
+            color: #18181b;
             -webkit-font-smoothing: antialiased;
         }
 
-        .selection-accent::selection {
+        body ::selection {
             background-color: rgba(37, 99, 235, 0.1);
             color: var(--color-accent);
         }
 
+        /* ─── Layout ────────────────────────────────── */
         .section-container {
-            max-width: 48rem; /* max-w-3xl */
+            max-width: 48rem;
             margin-left: auto;
             margin-right: auto;
             padding: 4rem 1.5rem;
             scroll-margin-top: 5rem;
         }
 
-        .bucket {
-            border: 1px solid #e4e4e7; /* zinc-200 */
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .bucket:hover {
-            border-color: var(--color-accent);
-            box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
-        }
-
-        .skill-box {
-            border: 1px solid #e4e4e7;
-            padding: 1.5rem;
-            border-radius: 0;
-            margin-bottom: 1rem;
-            background-color: transparent;
-            transition: all 0.3s ease;
-        }
-
-        .skill-box:hover {
-            border-color: var(--color-accent);
-            background-color: white;
-        }
-
-        .nav-link {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #52525b; /* zinc-600 */
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--color-accent);
-            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
-        }
-
+        /* ─── Components ────────────────────────────── */
         .label {
             font-size: 0.875rem;
             font-weight: 700;
@@ -90,70 +59,102 @@
             padding-bottom: 0.25rem;
         }
 
-        .text-accent { color: var(--color-accent); }
-        .bg-accent { background-color: var(--color-accent); }
-        .border-accent { border-color: var(--color-accent); }
-        
-        .font-mono { font-family: var(--font-mono); }
+        .bucket {
+            border: 1px solid #e4e4e7;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-        /* Mobile Menu Animation */
+        .bucket:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.1);
+        }
+
+        /* ─── Navigation ────────────────────────────── */
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #52525b;
+            transition: color 0.3s ease, filter 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--color-accent);
+            filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
+        }
+
+        /* ─── Mobile Menu Animation ─────────────────── */
         #mobile-menu {
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         #mobile-menu.hidden-drawer {
             transform: translateX(100%);
         }
+
+        /* ─── Utility ───────────────────────────────── */
+        .text-accent  { color: var(--color-accent); }
+        .bg-accent    { background-color: var(--color-accent); }
+        .font-mono    { font-family: var(--font-mono); }
     </style>
 </head>
-<body class="selection-accent">
+<body>
 
-    <!-- Navigation -->
+    <!-- ═══════════════════════════════════════════════
+         NAVIGATION
+    ════════════════════════════════════════════════ -->
     <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-zinc-100 z-50">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="text-xl font-bold tracking-tighter text-accent">
-                RPB.
-            </div>
 
-            <!-- Desktop Nav -->
+            <div class="text-xl font-bold tracking-tighter text-accent">RPB.</div>
+
+            <!-- Desktop Links -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#about"      class="nav-link">About</a>
+                <a href="#skills"     class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Work Experience</a>
                 <a href="#opensource" class="nav-link">Open Source</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#projects"   class="nav-link">Projects</a>
+                <a href="#contact"    class="nav-link">Contact</a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden p-2 text-zinc-600 transition-colors hover:text-accent" id="mobile-menu-btn">
-                <i data-lucide="menu" size="24"></i>
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-600 hover:text-accent transition-colors">
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Mobile Drawer -->
     <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] hidden-drawer flex flex-col p-8 md:hidden">
         <div class="flex justify-end mb-8">
             <button id="mobile-menu-close" class="p-2 text-zinc-600 hover:text-accent">
-                <i data-lucide="x" size="24"></i>
+                <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
         <div class="flex flex-col gap-6">
-            <a href="#about" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">About</a>
-            <a href="#skills" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Skills</a>
+            <a href="#about"      class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">About</a>
+            <a href="#skills"     class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Skills</a>
             <a href="#experience" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Experience</a>
             <a href="#opensource" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Open Source</a>
-            <a href="#projects" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Projects</a>
-            <a href="#contact" class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Contact</a>
+            <a href="#projects"   class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Projects</a>
+            <a href="#contact"    class="mobile-nav-link text-lg font-medium text-zinc-600 hover:text-accent">Contact</a>
         </div>
     </div>
 
-    <!-- Hero Section -->
+
+    <!-- ═══════════════════════════════════════════════
+         HERO / ABOUT
+    ════════════════════════════════════════════════ -->
     <header id="about" class="section-container pt-32 pb-16">
+
         <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
-            <img 
+            <img
                 src="assets/profile-pic.jpeg"
                 alt="Rudra Prasad Bhuyan"
                 class="w-32 h-32 rounded-lg object-cover border border-zinc-200"
@@ -163,188 +164,175 @@
                 <p class="text-xl text-zinc-600 font-medium">Aspiring Data Scientist | ML Engineer</p>
             </div>
         </div>
-        
+
         <div class="max-w-xl text-zinc-600 leading-relaxed mb-8">
             <p class="mb-4">
-                Electrical engineering background. Self-learned data science practitioner building end-to-end machine learning systems under real-world constraints.
+                Machine Learning Engineer with hands-on experience in data analysis, machine learning, and end-to-end
+                project execution. Strong focus on real-world datasets, feature engineering, model evaluation, and
+                practical problem solving through self-driven learning, internships, and open-source work.
             </p>
-            <p>
-                Focused on practical, system thinking solutions — not just models. I solve real problems using data.
-            </p>
+            <p>Focused on practical, system thinking solutions — not just models. I solve real problems using data.</p>
         </div>
 
         <div class="flex flex-wrap gap-4">
 
-            <!-- Resume -->
-            <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link" 
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i data-lucide="file-text" size="20"></i> Resume
+            <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
+               target="_blank"
+               class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+                <i class="fa-solid fa-file-lines"></i> Resume
             </a>
 
-            <!-- GitHub -->
-            <a href="https://github.com/Rudra-G-23" 
-            target="_blank"
-            class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i data-lucide="github" size="20"></i> GitHub
+            <a href="https://github.com/Rudra-G-23"
+               target="_blank"
+               class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+                <i class="fa-brands fa-github"></i> GitHub
             </a>
 
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" 
-            target="_blank"
-            class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i data-lucide="linkedin" size="20"></i> LinkedIn
+            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/"
+               target="_blank"
+               class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
 
         </div>
     </header>
 
-    <!-- Skills Section -->
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS
+    ════════════════════════════════════════════════ -->
     <section id="skills" class="section-container border-t border-zinc-100">
         <span class="label">Skills & Expertise</span>
 
         <div class="space-y-2">
-
             <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <span class="font-bold text-zinc-900">Languages:</span>
                 <span class="text-zinc-600"> Python, SQL</span>
             </div>
-
             <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <span class="font-bold text-zinc-900">Data Analysis Framework:</span>
                 <span class="text-zinc-600"> Pandas, Numpy</span>
             </div>
-
             <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <span class="font-bold text-zinc-900">Visualization:</span>
-                <span class="text-zinc-600"> Matplotlib, Seaborn, Plotly</span>
+                <span class="text-zinc-600"> Matplotlib, Seaborn, Plotly, Power BI</span>
             </div>
-
             <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <span class="font-bold text-zinc-900">ML Frameworks:</span>
                 <span class="text-zinc-600"> PyTorch, TensorFlow, Scikit-learn, XGBoost</span>
             </div>
-
             <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <span class="font-bold text-zinc-900">MLOps & Tools:</span>
                 <span class="text-zinc-600"> Docker, MLflow, Git, FastAPI</span>
             </div>
-
-            <!--
-            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-                <span class="font-bold text-zinc-900">Generative AI & NLP:</span>
-                <span class="text-zinc-600"> Hugging Face, LangChain, RAG, LLMs</span>
-            </div>
-
-            <div class="px-4 py-2 rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-                <span class="font-bold text-zinc-900">Cloud & Data:</span>
-                <span class="text-zinc-600"> AWS (SageMaker), GCP, Databricks, Spark</span>
-            </div>
-            -->
-
         </div>
     </section>
 
-    <!-- Work Experience -->
+
+    <!-- ═══════════════════════════════════════════════
+         WORK EXPERIENCE
+    ════════════════════════════════════════════════ -->
     <section id="experience" class="section-container border-t border-zinc-100">
         <span class="label">Work Experience</span>
         <div class="space-y-12">
 
-            <!--SBC Lab-->
+            <!-- SBC Labs -->
             <div class="group">
                 <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
                     <h3 class="text-xl font-bold">Junior Data Scientist Intern <span class="text-accent">@</span> SBC Labs</h3>
-                    <span class="font-mono text-sm text-zinc-400">Nov 2025 - Feb 2026</span>
+                    <span class="font-mono text-sm text-zinc-400">Nov 2025 – Feb 2026</span>
                 </div>
                 <ul class="space-y-2 mb-4">
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Developed a structured data analysis framework using Python to analyze an India-level open-source dataset with 400+ features, identifying high-impact variables and reducing feature redundancy.                    </li>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
+                        Developed a structured data analysis framework using Python to analyze an India-level open-source dataset with 400+ features, identifying high-impact variables and reducing feature redundancy.
+                    </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Optimized data quality through extensive data cleaning and preprocessing in Python, transforming messy raw data into model-ready datasets and improving downstream analytics efficiency.                    </li>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
+                        Optimized data quality through extensive data cleaning and preprocessing in Python, transforming messy raw data into model-ready datasets and improving downstream analytics efficiency.
+                    </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Built a state-level interactive dashboard using Python visualization libraries, enabling focused insights for one state and improving decision-making clarity for stakeholders.                    </li>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
+                        Built a state-level interactive dashboard using Python visualization libraries, enabling focused insights for one state and improving decision-making clarity for stakeholders.
+                    </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
                         Improved team understanding by creating a comprehensive Feature Requirement & Documentation Sheet, reducing dataset confusion and standardizing feature interpretation across the team.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Collaborated with technical and non-technical members by delivering structured weekly reports and translating complex data findings into actionable insights, enabling informed project decisions.                    </li>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
+                        Collaborated with technical and non-technical members by delivering structured weekly reports and translating complex data findings into actionable insights, enabling informed project decisions.
+                    </li>
                 </ul>
             </div>
 
-            <!--Tata Power-->
+            <!-- Tata Power -->
             <div class="group">
                 <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
                     <h3 class="text-xl font-bold">Electrical Engineering Intern <span class="text-accent">@</span> Tata Power</h3>
-                    <span class="font-mono text-sm text-zinc-400">June 2025 - July 2025</span>
+                    <span class="font-mono text-sm text-zinc-400">June 2025 – July 2025</span>
                 </div>
                 <ul class="space-y-2 mb-4">
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
                         Gained hands-on exposure to electricity distribution operations, including smart meter functionality, maintenance workflows, and field service processes.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
                         Observed and analyzed the end-to-end digital complaint management system, including online application handling, user request processing, and new connection workflows.
                     </li>
                     <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="text-accent mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0"></span>
-                        Understood field-to-system integration where service updates and on-site photographic evidence were recorded and synchronized within Tata Power’s internal operations platform.
+                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
+                        Understood field-to-system integration where service updates and on-site photographic evidence were recorded and synchronized within Tata Power's internal operations platform.
                     </li>
                 </ul>
             </div>
+
         </div>
     </section>
 
-    <!-- Open Source -->
+
+    <!-- ═══════════════════════════════════════════════
+         OPEN SOURCE
+    ════════════════════════════════════════════════ -->
     <section id="opensource" class="section-container border-t border-zinc-100">
         <span class="label">Open Source</span>
         <div class="space-y-6">
 
-            <!-- show-file-tree -->
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">show-file-tree</h3>
-                <p class="text-zinc-600 mb-6">
-                    A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.
-                </p>
+                <p class="text-zinc-600 mb-6">A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.</p>
                 <div class="flex gap-4">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        PyPI <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-cube text-xs"></i> PyPI
                     </a>
                     <a href="https://rudra-g-23.github.io/show-file-tree/" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        Docs <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-book text-xs"></i> Docs
                     </a>
                     <a href="https://github.com/Rudra-G-23/show-file-tree" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        GitHub <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
                 </div>
             </div>
 
-            <!-- find-my-joint -->
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">find-my-joint</h3>
-                <p class="text-zinc-600 mb-6">
-                    A utility to find potential join keys (matching columns) across multiple pandas DataFrames.
-                </p>
+                <p class="text-zinc-600 mb-6">A utility to find potential join keys (matching columns) across multiple pandas DataFrames.</p>
                 <div class="flex gap-4">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        PyPI <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-cube text-xs"></i> PyPI
                     </a>
                     <a href="https://rudra-g-23.github.io/Find-My-Joint/" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        Docs <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-book text-xs"></i> Docs
                     </a>
                     <a href="https://github.com/Rudra-G-23/Find-My-Joint" target="_blank"
-                    class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
-                        GitHub <i data-lucide="external-link" size="14"></i>
+                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
                 </div>
             </div>
@@ -352,12 +340,36 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
+
+    <!-- ═══════════════════════════════════════════════
+         FEATURED PROJECTS
+    ════════════════════════════════════════════════ -->
     <section id="projects" class="section-container border-t border-zinc-100">
         <span class="label">Featured Projects</span>
         <div class="space-y-8">
 
-            <!-- Project 1 -->
+            <div class="bucket">
+                <h3 class="text-xl font-bold mb-3">Vehicle Insurance Risk Prediction</h3>
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
+                    <p class="text-zinc-700">[Ongoing] Insurance companies need to estimate the risk associated with insuring a vehicle. Accurate risk prediction helps companies: Reduce financial loss, Price policies correctly, Detect high-risk customers.</p>
+                </div>
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
+                    <p class="text-zinc-600 text-sm">Python, Flask, NoSQL, AWS, CI/CD, Docker</p>
+                </div>
+                <ul class="space-y-2 mb-6">
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Built an end-to-end MLOps pipeline to predict vehicle insurance risk using automated data ingestion, transformation, training, and deployment.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Integrated MongoDB, AWS S3, and EC2 with a modular ML pipeline for scalable and production-ready workflows.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Implemented CI/CD using GitHub Actions and Docker for seamless model deployment and updates.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Developed a Flask-based web app for real-time prediction and user interaction.</li>
+                </ul>
+                <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" target="_blank"
+                   class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View Project
+                </a>
+            </div>
+
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">SQL Modern Data Warehouse</h3>
                 <div class="mb-4">
@@ -369,30 +381,16 @@
                     <p class="text-zinc-600 text-sm">PostgreSQL, SQL (ETL), Star Schema Modeling, EDA, Power BI</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Built a 3-layer Medallion architecture (Bronze–Silver–Gold) in PostgreSQL, transforming raw CSV data into analytics-ready tables.
-                    </li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Developed end-to-end ETL pipelines using SQL, integrating ERP & CRM data into a scalable star schema model.
-                    </li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Optimized business reporting by creating analytical views and SQL reports for customer behavior, product performance, and sales trends.
-                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Built a 3-layer Medallion architecture (Bronze–Silver–Gold) in PostgreSQL, transforming raw CSV data into analytics-ready tables.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Developed end-to-end ETL pipelines using SQL, integrating ERP & CRM data into a scalable star schema model.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Optimized business reporting by creating analytical views and SQL reports for customer behavior, product performance, and sales trends.</li>
                 </ul>
-
-                <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" 
-                target="_blank"
-                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-                View Project 
-                <i data-lucide="external-link" size="14"></i>
+                <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" target="_blank"
+                   class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View Project
                 </a>
-
             </div>
 
-            <!-- Project 2 -->
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">Yelp Big Data Capstone</h3>
                 <div class="mb-4">
@@ -404,28 +402,16 @@
                     <p class="text-zinc-600 text-sm">Python, Polars, JSON, Parquet, Jupyter Notebook</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Built a high-performance data processing pipeline using Polars, handling large Yelp JSON files efficiently without memory bottlenecks.
-                    </li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Optimized storage and I/O by converting raw JSON data into Parquet format, improving processing speed and scalability.
-                    </li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Developed step-by-step analytical workflows (filtering, groupby, joins, rolling ops) to extract structured insights from large-scale business data.
-                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Built a high-performance data processing pipeline using Polars, handling large Yelp JSON files efficiently without memory bottlenecks.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Optimized storage and I/O by converting raw JSON data into Parquet format, improving processing speed and scalability.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Developed step-by-step analytical workflows (filtering, groupby, joins, rolling ops) to extract structured insights from large-scale business data.</li>
                 </ul>
-                <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" 
-                target="_blank"
-                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-                View Project 
-                <i data-lucide="external-link" size="14"></i>
+                <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" target="_blank"
+                   class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View Project
                 </a>
             </div>
 
-            <!-- Project 3 -->
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">Breast Cancer Prediction App</h3>
                 <div class="mb-4">
@@ -437,141 +423,91 @@
                     <p class="text-zinc-600 text-sm">Python, Scikit-learn (Logistic Regression), Streamlit, Pandas, Plotly</p>
                 </div>
                 <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Built an end-to-end ML pipeline using Logistic Regression (Scikit-learn) for tumor classification based on 30 diagnostic features.
-                    </li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2">
-                        <span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>
-                        Developed a real-time web application in Streamlit, delivering instant predictions with probability confidence scores.
-                    </li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Built an end-to-end ML pipeline using Logistic Regression (Scikit-learn) for tumor classification based on 30 diagnostic features.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Developed a real-time web application in Streamlit, delivering instant predictions with probability confidence scores.</li>
                 </ul>
-                <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" 
-                target="_blank"
-                class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-                View Project 
-                <i data-lucide="external-link" size="14"></i>
+                <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" target="_blank"
+                   class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> View Project
                 </a>
             </div>
-            
-        <!--
-            <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">Customer Segmentation Engine</h3>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">Generic marketing campaigns resulting in low conversion rates.</p>
-                </div>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, K-Means Clustering, Scikit-Learn</p>
-                </div>
-                <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Identified 5 persona types using unsupervised learning.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Visualized clusters using PCA for dimensionality reduction.</li>
-                </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
-            </div>
-
-
-            <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">Anomaly Detection in Sensors</h3>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">Manual monitoring of industrial equipment leading to delayed maintenance.</p>
-                </div>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, Isolation Forest, NumPy</p>
-                </div>
-                <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Detected 98% of critical failures before occurrence.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Processed real-time sensor streams with minimal overhead.</li>
-                </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
-            </div>
-
-
-            <div class="bucket">
-                <h3 class="text-xl font-bold mb-3">NLP Sentiment Analyzer</h3>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
-                    <p class="text-zinc-700">Inability to process large volumes of customer feedback manually.</p>
-                </div>
-                <div class="mb-4">
-                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
-                    <p class="text-zinc-600 text-sm">Python, NLTK, TF-IDF, Logistic Regression</p>
-                </div>
-                <ul class="space-y-2 mb-6">
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Classified feedback into sentiments with 88% accuracy.</li>
-                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="text-zinc-300 mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0"></span>Summarized key themes from negative reviews.</li>
-                </ul>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">View Project <i data-lucide="external-link" size="14"></i></a>
-            </div>
-        -->
 
         </div>
+
         <div class="mt-12 text-center">
-            <a href="https://github.com/Rudra-G-23/Data-Science-Projects-Portflio" target="_blank" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-all font-bold shadow-lg hover:shadow-blue-500/20 group">
-                <i data-lucide="github" size="20"></i> More Projects
+            <a href="https://github.com/Rudra-G-23/Data-Science-Projects-Portflio" target="_blank"
+               class="inline-flex items-center gap-2 bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-all font-bold shadow-lg hover:shadow-blue-500/20">
+                <i class="fa-brands fa-github"></i> More Projects
             </a>
         </div>
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT / FOOTER
+    ════════════════════════════════════════════════ -->
     <footer id="contact" class="section-container border-t border-zinc-100 pb-24">
         <span class="label">Get in Touch</span>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <a href="mailto:rudraprasadbhuyan999@gmail.com" class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+
+            <a href="mailto:rudraprasadbhuyan999@gmail.com"
+               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
-                    <i data-lucide="mail" size="24" class="transition-colors group-hover:text-blue-600"></i>
+                    <i class="fa-solid fa-envelope text-xl w-6 text-center"></i>
                 </div>
-                <span class="font-medium transition-colors group-hover:text-blue-600">rudraprasadbhuyan999@gmail.com</span>
+                <span class="font-medium">rudraprasadbhuyan999@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank" class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+
+            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank"
+               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
-                    <i data-lucide="linkedin" size="24" class="transition-colors group-hover:text-blue-600"></i>
+                    <i class="fa-brands fa-linkedin text-xl w-6 text-center"></i>
                 </div>
-                <span class="font-medium transition-colors group-hover:text-blue-600">linkedin.com/in/rudraprasadbhuyan</span>
+                <span class="font-medium">linkedin.com/in/rudraprasadbhuyan</span>
             </a>
-            <a href="https://github.com/Rudra-G-23" target="_blank" class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+
+            <a href="https://github.com/Rudra-G-23" target="_blank"
+               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
-                    <i data-lucide="github" size="24" class="transition-colors group-hover:text-blue-600"></i>
+                    <i class="fa-brands fa-github text-xl w-6 text-center"></i>
                 </div>
-                <span class="font-medium transition-colors group-hover:text-blue-600">github.com/Rudra-G-23</span>
+                <span class="font-medium">github.com/Rudra-G-23</span>
             </a>
-            <a href="https://kaggle.com/rudraprasadbhuyan" target="_blank" class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+
+            <a href="https://kaggle.com/rudraprasadbhuyan" target="_blank"
+               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
-                    <i data-lucide="database" size="24" class="transition-colors group-hover:text-blue-600"></i>
+                    <i class="fa-brands fa-kaggle text-xl w-6 text-center"></i>
                 </div>
-                <span class="font-medium transition-colors group-hover:text-blue-600">kaggle.com/rudraprasadbhuyan</span>
+                <span class="font-medium">kaggle.com/rudraprasadbhuyan</span>
             </a>
+
         </div>
-        <p class="mt-16 text-zinc-400 text-xs font-mono">
-            &copy; <span id="year"></span> Rudra Prasad Bhuyan.
-        </p>
+
+        <p class="mt-16 text-zinc-400 text-xs font-mono">&copy; <span id="year"></span> Rudra Prasad Bhuyan.</p>
     </footer>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
 
-        // Set current year
+    <!-- ═══════════════════════════════════════════════
+         SCRIPTS
+    ════════════════════════════════════════════════ -->
+    <script>
+        // ── Year ──────────────────────────────────────
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobile Menu Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        // ── Mobile Menu ───────────────────────────────
+        const mobileMenuBtn     = document.getElementById('mobile-menu-btn');
+        const mobileMenu        = document.getElementById('mobile-menu');
+        const mobileMenuClose   = document.getElementById('mobile-menu-close');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        const mobileNavLinks    = document.querySelectorAll('.mobile-nav-link');
 
         function toggleMenu(show) {
             if (show) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenuOverlay.classList.remove('hidden');
-                // Force reflow
-                mobileMenu.offsetHeight;
-                mobileMenuOverlay.offsetHeight;
+                mobileMenu.offsetHeight; // force reflow
                 mobileMenu.classList.remove('hidden-drawer');
                 mobileMenuOverlay.classList.replace('opacity-0', 'opacity-100');
                 document.body.style.overflow = 'hidden';
@@ -586,31 +522,22 @@
             }
         }
 
-        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
-        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+        mobileMenuBtn.addEventListener('click',     () => toggleMenu(true));
+        mobileMenuClose.addEventListener('click',   () => toggleMenu(false));
         mobileMenuOverlay.addEventListener('click', () => toggleMenu(false));
-        
-        // Close on link click
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => toggleMenu(false));
-        });
+        mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
 
-        // Simple Smooth Scroll Logic
+        // ── Smooth Scroll ─────────────────────────────
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
                 e.preventDefault();
                 const target = document.querySelector(targetId);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 64, // Subtracting nav height
-                        behavior: 'smooth'
-                    });
-                }
+                if (target) window.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
             });
         });
     </script>
+
 </body>
 </html>
