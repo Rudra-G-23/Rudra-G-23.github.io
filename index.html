@@ -333,58 +333,106 @@
     ════════════════════════════════════════════════ -->
     <section id="experience" class="section-container border-t border-zinc-100">
         <span class="label">Work Experience</span>
-        <div class="space-y-12">
 
+        <div class="relative max-w-4xl mx-auto">
+
+            <!-- CENTER LINE -->
+            <div class="absolute left-1/2 top-0 h-full w-[2px] bg-zinc-200"></div>
+
+            <!-- RIGHT CARD -->
             <!-- SBC Labs -->
-            <div class="group">
-                <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-                    <h3 class="text-xl font-bold">Junior Data Scientist Intern <span class="text-accent">@</span> SBC Labs</h3>
-                    <span class="font-mono text-sm text-zinc-400">Nov 2025 – Feb 2026</span>
+            <div class="relative mb-10">
+                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#5e17eb] rounded-full"></div>
+
+                <div class="exp-card md:ml-[55%] ml-0 mt-6 md:mt-0 border border-zinc-200 rounded-xl p-4 bg-white hover:shadow-lg hover:border-[#5e17eb] transition-all">
+
+                    <div class="flex items-center">
+                        <div>
+                            <h3 class="font-bold">Jr. Data Scientist Intern</h3>
+                            <p class="text-sm text-zinc-600">SBC Labs</p>
+                            <p class="text-xs text-zinc-400">Nov 2025 – Feb 2026</p>
+                        </div>
+
+                        <button onclick="toggleExp(this)" class="ml-auto text-[#5e17eb]">
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="border-t mt-4 pt-4 space-y-2 text-sm text-zinc-600">
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Built a structured data analysis pipeline in Python on a large India-level dataset (400+ features), identifying key variables and reducing redundancy.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Cleaned and preprocessed raw data to improve data quality and make it model-ready for efficient analysis.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Developed a state-level interactive dashboard using Python visualization tools for clearer, focused insights.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Created a feature documentation sheet to standardize understanding and reduce dataset confusion.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Delivered weekly reports and translated complex data insights into actionable decisions for both technical and non-technical stakeholders.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-                <ul class="space-y-2 mb-4">
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Developed a structured data analysis framework using Python to analyze an India-level open-source dataset with 400+ features, identifying high-impact variables and reducing feature redundancy.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Optimized data quality through extensive data cleaning and preprocessing in Python, transforming messy raw data into model-ready datasets and improving downstream analytics efficiency.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Built a state-level interactive dashboard using Python visualization libraries, enabling focused insights for one state and improving decision-making clarity for stakeholders.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Improved team understanding by creating a comprehensive Feature Requirement & Documentation Sheet, reducing dataset confusion and standardizing feature interpretation across the team.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Collaborated with technical and non-technical members by delivering structured weekly reports and translating complex data findings into actionable insights, enabling informed project decisions.
-                    </li>
-                </ul>
             </div>
 
-            <!-- Tata Power -->
-            <div class="group">
-                <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-                    <h3 class="text-xl font-bold"> Intern <span class="text-accent">@</span> Tata Power WODL</h3>
-                    <span class="font-mono text-sm text-zinc-400">June 2025 – July 2025</span>
+            <!-- LEFT CARD -->
+            <!-- Tata Power -->             
+            <div class="relative mb-10">
+                <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#5e17eb] rounded-full"></div>
+
+                <div class="exp-card md:mr-[55%] ml-0 mt-6 md:mt-0 border border-zinc-200 rounded-xl p-4 bg-white hover:shadow-lg hover:border-[#5e17eb] transition-all text-left md:text-right">
+
+                    <div class="flex items-center md:flex-row-reverse">
+                        <div>
+                            <h3 class="font-bold">Intern</h3>
+                            <p class="text-sm text-zinc-600">Tata Power WODL</p>
+                            <p class="text-xs text-zinc-400">June 2025 – July 2025</p>
+                        </div>
+
+                        <button onclick="toggleExp(this)" class="ml-auto md:ml-0 md:mr-auto text-[#5e17eb]">
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="border-t mt-4 pt-4 space-y-2 text-sm text-zinc-600 text-left">
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Gained hands-on exposure to electricity distribution and smart meter operations.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Analyzed digital complaint and new connection workflows.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#5e17eb] rounded-full flex-shrink-0"></span>
+                                <p>Understood field-to-system integration and service reporting processes.</p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
                 </div>
-                <ul class="space-y-2 mb-4">
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Gained hands-on exposure to electricity distribution operations, including smart meter functionality, maintenance workflows, and field service processes.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Observed and analyzed the end-to-end digital complaint management system, including online application handling, user request processing, and new connection workflows.
-                    </li>
-                    <li class="text-zinc-900 leading-relaxed flex items-start gap-2">
-                        <span class="mt-2.5 h-1 w-1 rounded-full bg-accent shrink-0 inline-block"></span>
-                        Understood field-to-system integration where service updates and on-site photographic evidence were recorded and synchronized within Tata Power's internal operations platform.
-                    </li>
-                </ul>
             </div>
 
         </div>
@@ -767,6 +815,20 @@
             const icon = btn.querySelector('i');
 
             details.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function toggleExp(btn) {
+            const card = btn.closest('.exp-card');
+            const details = card.querySelector('.exp-details');
+            const icon = btn.querySelector('i');
+
+            if (details.style.maxHeight) {
+                details.style.maxHeight = null;
+            } else {
+                details.style.maxHeight = details.scrollHeight + "px";
+            }
+
             icon.classList.toggle('rotate-180');
         }
 
