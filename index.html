@@ -98,6 +98,22 @@
         .text-accent  { color: var(--color-accent); }
         .bg-accent    { background-color: var(--color-accent); }
         .font-mono    { font-family: var(--font-mono); }
+
+        .details {
+            transition: all 0.3s ease;
+        }
+        .expand-btn i {
+            transition: transform 0.3s ease;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .project-card:hover {
+            border-color: #2563eb; /* blue-600 */
+            box-shadow: 0 0 0 1px #2563eb;
+        }
+
     </style>
 </head>
 <body>
@@ -269,7 +285,7 @@
             <!-- Tata Power -->
             <div class="group">
                 <div class="flex justify-between items-baseline mb-4 flex-wrap gap-2">
-                    <h3 class="text-xl font-bold">Electrical Engineering Intern <span class="text-accent">@</span> Tata Power</h3>
+                    <h3 class="text-xl font-bold"> Intern <span class="text-accent">@</span> Tata Power WODL</h3>
                     <span class="font-mono text-sm text-zinc-400">June 2025 – July 2025</span>
                 </div>
                 <ul class="space-y-2 mb-4">
@@ -347,6 +363,54 @@
     <section id="projects" class="section-container border-t border-zinc-100">
         <span class="label">Featured Projects</span>
         <div class="space-y-8">
+
+        <div class="project-card border border-zinc-200 rounded-xl p-4 hover:shadow-lg transition-all">
+
+            <div class="flex gap-4">
+                <img src="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/raw/main/assets/helper/pipeline-architecture-1.png" 
+                    class="w-28 h-28 object-cover rounded-lg">
+
+                <div class="flex-1">
+                    <h3 class="text-lg font-bold">Vehicle Insurance Risk Prediction</h3>
+                    <p class="text-sm text-zinc-400 mt-1">Python • Flask • AWS • Docker</p>
+
+                    <div class="flex justify-between mt-3">
+                        <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" 
+                        target="_blank"
+                        class="text-sm font-semibold text-blue-600 flex items-center gap-1 hover:underline">
+                            View Project <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+
+                        <button onclick="toggleDetails(this)" class="text-blue-600">
+                            <i class="fa-solid fa-chevron-down transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- HIDDEN DETAILS -->
+            <div class="details hidden mt-4 border-t pt-4 text-sm text-zinc-600">
+
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
+                    <p class="text-zinc-700">[Ongoing] Insurance companies need to estimate the risk associated with insuring a vehicle. Accurate risk prediction helps companies: Reduce financial loss, Price policies correctly, Detect high-risk customers.</p>
+                </div>
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
+                    <p class="text-zinc-600 text-sm">Python, Flask, NoSQL, AWS, CI/CD, Docker</p>
+                </div>
+                <ul class="space-y-2 mb-6">
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Built an end-to-end MLOps pipeline to predict vehicle insurance risk using automated data ingestion, transformation, training, and deployment.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Integrated MongoDB, AWS S3, and EC2 with a modular ML pipeline for scalable and production-ready workflows.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Implemented CI/CD using GitHub Actions and Docker for seamless model deployment and updates.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Developed a Flask-based web app for real-time prediction and user interaction.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
 
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-3">Vehicle Insurance Risk Prediction</h3>
@@ -432,6 +496,26 @@
                 </a>
             </div>
 
+            <div class="bucket">
+                <h3 class="text-xl font-bold mb-3">Transportation & Logistic Analysis Dashboard</h3>
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Problem</span>
+                    <p class="text-zinc-700">Find the efficiency rote, suppliers and customers to reduce the time and money.</p>
+                </div>
+                <div class="mb-4">
+                    <span class="text-xs font-mono text-zinc-400 uppercase tracking-tighter block mb-1">Tools</span>
+                    <p class="text-zinc-600 text-sm">Power BI, KPI Development</p>
+                </div>
+                <ul class="space-y-2 mb-6">
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Designed interactive Power BI dashboard with custom SVG visuals to analyze supplier and customer performance.</li>
+                    <li class="text-zinc-600 text-sm flex items-start gap-2"><span class="mt-1.5 h-1 w-1 rounded-full bg-zinc-300 shrink-0 inline-block"></span>Identified 61.46% overall delay rate and 275 mins average delay, highlighting Tamil Transport and May 2020 as major delay contributors.</li>
+                </ul>
+                <a href="https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41?challenge=fp20-analytics-february-2025&utm_source=linkedin&utm_medium=social&utm_campaign=fp20-march25-top5" target="_blank"
+                   class="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> Live Project
+                </a>
+            </div>
+
         </div>
 
         <div class="mt-12 text-center">
@@ -488,6 +572,54 @@
         <p class="mt-16 text-zinc-400 text-xs font-mono">&copy; <span id="year"></span> Rudra Prasad Bhuyan.</p>
     </footer>
 
+<div class="project-card border border-zinc-200 rounded-xl p-4 hover:shadow-lg transition-all">
+
+    <div class="flex gap-4">
+
+        <!-- LEFT IMAGE -->
+        <img src="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/raw/main/assets/helper/pipeline-architecture-1.png" 
+             class="w-28 h-28 object-cover rounded-lg" 
+             alt="project image">
+
+        <div class="flex-1">
+            <h3 class="text-lg font-bold">Vehicle Insurance Risk Prediction</h3>
+            <p class="text-sm text-zinc-400 mt-1">
+                Python • Flask • AWS • Docker
+            </p>
+            <div class="flex items-center justify-between mt-3">
+                <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/"
+                   target="_blank"
+                   class="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-1">
+                    View Project
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+                <button onclick="toggleDetails(this)"
+                        class="text-blue-600 text-lg transition-transform duration-300">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- HIDDEN DETAILS -->
+    <div class="details hidden mt-4 text-sm text-zinc-600">
+
+        <p class="mb-3">
+            Insurance companies need to estimate vehicle risk to reduce loss and price policies correctly.
+        </p>
+
+        <ul class="space-y-2">
+            <li>• Built end-to-end MLOps pipeline</li>
+            <li>• Integrated MongoDB + AWS</li>
+            <li>• CI/CD with GitHub Actions & Docker</li>
+            <li>• Flask app for real-time prediction</li>
+        </ul>
+
+    </div>
+
+</div>
 
     <!-- ═══════════════════════════════════════════════
          SCRIPTS
@@ -537,6 +669,16 @@
                 if (target) window.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
             });
         });
+
+        function toggleDetails(btn) {
+            const card = btn.closest('.project-card');
+            const details = card.querySelector('.details');
+            const icon = btn.querySelector('i');
+
+            details.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
     </script>
 
 </body>
