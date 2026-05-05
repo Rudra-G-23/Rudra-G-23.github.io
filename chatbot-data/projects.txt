@@ -1,0 +1,193 @@
+TYPE: [PROJECT]
+Name: show-file-tree
+Type: Open Source CLI Tool
+Description:
+A small, fast command-line tool to display styled file and folder trees.
+
+Problem:
+Developers need a clean and customizable way to visualize project directory structures.
+
+Solution:
+Built a CLI tool that generates visually structured file trees with styling and customization options.
+
+Technologies:
+Python, CLI Development
+
+Key Features:
+- Styled file tree output
+- Supports colors and icons
+- Displays metadata for files and folders
+- Lightweight and fast
+
+Project Link:
+GitHub: https://github.com/Rudra-G-23/show-file-tree
+Docs: https://rudra-g-23.github.io/show-file-tree/
+
+TYPE: [PROJECT]
+Name: find-my-joint
+Type: Open Source Data Utility
+Description:
+A utility to identify potential join keys across multiple pandas DataFrames.
+
+Problem:
+Finding matching columns between datasets is time-consuming and error-prone.
+
+Solution:
+Developed a tool that scans multiple DataFrames and suggests possible join keys automatically.
+
+Technologies:
+Python, Pandas
+
+Key Features:
+- Detects matching columns across datasets
+- Simplifies data merging process
+- Reduces manual effort in data analysis
+
+Project Link:
+GitHub: https://github.com/Rudra-G-23/Find-My-Joint
+Docs: https://rudra-g-23.github.io/Find-My-Joint/
+
+
+TYPE: [PROJECT]
+Name: Vehicle Insurance Risk Prediction
+Type: Machine Learning Project
+Description:
+A system to predict vehicle insurance risk for better pricing and loss reduction.
+
+Problem:
+Insurance companies need accurate risk estimation to avoid financial loss.
+
+Solution:
+Built an end-to-end machine learning pipeline for predicting vehicle risk.
+
+Technologies:
+Python, Flask, AWS, Docker, MongoDB
+
+Key Features:
+- End-to-end MLOps pipeline
+- CI/CD using GitHub Actions and Docker
+- Real-time prediction using Flask API
+- Integrated MongoDB and AWS services
+
+Project Link:
+https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/
+
+
+TYPE: [PROJECT]
+Name: SQL Modern Data Warehouse
+Type: Data Engineering Project
+Description:
+A modern data warehouse built using ERP and CRM data for analytics.
+
+Problem:
+Raw ERP and CRM data was inconsistent and not suitable for analysis.
+
+Solution:
+Designed and implemented a structured data warehouse using ETL pipelines.
+
+Technologies:
+PostgreSQL, SQL, ETL, Power BI
+
+Key Features:
+- Medallion architecture (Bronze, Silver, Gold layers)
+- ETL pipelines for data integration
+- Analytical reporting for business insights
+
+Project Link:
+https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project
+
+
+TYPE: [PROJECT]
+Name: Yelp Big Data Analysis
+Type: Big Data Project
+Description:
+Analyzed large Yelp datasets efficiently without memory issues.
+
+Problem:
+Handling large JSON datasets can cause memory and performance issues.
+
+Solution:
+Used efficient data processing techniques to manage large-scale data.
+
+Technologies:
+Python, Polars, JSON, Parquet
+
+Key Features:
+- Efficient data processing using Polars
+- Optimized memory usage
+- Converted JSON data into Parquet format
+
+Project Link:
+https://github.com/Rudra-G-23/yelp-bigdata-capstone
+
+
+TYPE: [PROJECT]
+Name: Breast Cancer Prediction App
+Type: Machine Learning Application
+Description:
+A real-time prediction system for tumor classification.
+
+Problem:
+Need for quick and reliable tumor classification using medical data.
+
+Solution:
+Developed a machine learning application for real-time predictions.
+
+Technologies:
+Python, Scikit-learn, Streamlit
+
+Key Features:
+- Real-time prediction interface
+- User-friendly web application
+- ML-based classification system
+
+Project Link:
+https://github.com/Rudra-G-23/breast-cancer-prediction-app/
+
+
+TYPE: [PROJECT]
+Name: Transportation and Logistic Dashboard
+Type: Data Analytics Project
+Description:
+A dashboard to analyze logistics performance and reduce operational delays.
+
+Problem:
+Logistics inefficiencies increase operational costs and delays.
+
+Solution:
+Built a dashboard to track KPIs and optimize logistics performance.
+
+Technologies:
+Power BI
+
+Key Features:
+- KPI tracking
+- Operational performance analysis
+- Insightful visual dashboards
+
+Project Link:
+https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41
+
+
+TYPE: [PROJECT]
+Name: Smart Transaction Ledger
+Type: AI and Data Project
+Description:
+An AI-powered system to clean financial transactions and detect fraud.
+
+Problem:
+Users struggle with messy financial data and undetected fraud patterns.
+
+Solution:
+Developed a system that cleans, categorizes, and analyzes transactions.
+
+Technologies:
+Python, FastAPI, SQL, Machine Learning
+
+Key Features:
+- Data cleaning and categorization
+- Fraud detection system
+- Financial insights generation
+
+Project Link:
+https://github.com/Rudra-G-23/smart-transaction-ledger

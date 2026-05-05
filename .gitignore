@@ -1,8 +1,6 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,git,gitbook,python,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,git,gitbook,python,visualstudio
-
-test.html
+# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,visualstudio,python,gitbook,git,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,visualstudio,python,gitbook,git,react
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -208,6 +206,20 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 ### VisualStudioCode ###
 .vscode/*
@@ -642,7 +654,7 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,git,gitbook,python,visualstudio
+# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,visualstudio,python,gitbook,git,react
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
