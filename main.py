@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 import os
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -14,9 +15,9 @@ app = FastAPI(title="Rudra Portfolio Chatbot API")
 # Load embedding model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# Load memory
-with open(r"chatbot-data\data.json", "r", encoding="utf-8") as f:
-    DATA = json.load(f)
+CHATBOT_DATA_URL = r"https://raw.githubusercontent.com/Rudra-G-23/Rudra-G-23.github.io/refs/heads/main/chatbot-data/data.json"
+response = requests.get(CHATBOT_DATA_URL)
+DATA = response.json()
 
 # Groq client
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
@@ -30,7 +31,7 @@ def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
-def search(query, top_k=1):
+def search(query, top_k=3):
     query_embedding = model.encode(query)
 
     scores = []
