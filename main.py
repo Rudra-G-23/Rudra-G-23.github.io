@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = FastAPI()
+app = FastAPI(title="Rudra Portfolio Chatbot API")
 
 # Load embedding model
 model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -30,7 +30,7 @@ def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
-def search(query, top_k=3):
+def search(query, top_k=1):
     query_embedding = model.encode(query)
 
     scores = []

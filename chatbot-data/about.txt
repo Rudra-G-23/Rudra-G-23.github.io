@@ -1,0 +1,8 @@
+TYPE: [ABOUT]
+Rudra Prasad Bhuyan is an aspiring data scientist and machine learning engineer.
+
+He has hands-on experience in data analysis, machine learning, and building end-to-end data science projects.
+
+He focuses on solving real-world problems using data instead of just building models.
+
+He prefers system thinking and practical solutions that can be used in real applications.

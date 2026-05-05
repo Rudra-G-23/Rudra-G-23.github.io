@@ -1,0 +1,31 @@
+TYPE: [WORK EXPERIENCE]
+Organization: SBC LABS
+Duration: Nov 2025 – Feb 2026
+Designation: Jr. Data scientist
+
+RESPONSIBILITIES:
+- Analyzed a large-scale dataset with 400+ features, identifying which data points were truly useful for the project.
+- Performed extensive data cleaning and preprocessing improving data quality and preparing it for modeling.
+- Carried out a complete feature-by-feature and table-by-table analysis to understand data meaning, structure, and relationships.
+
+ACHIEVEMENTS:
+- Created a detailed feature requirement & documentation sheets that clarified the purpose of each feature for the entire team.
+- Used a User data understanding approach to match stored data with real project needs and ensure feature relevance.
+- Provided clarity to the team by explaining what the data actually represents and which features should be prioritized.
+- Submitted weekly progress reports and communicated findings effectively to both technical and non-technical members.
+- Helped the team make informed decisions by converting messy, unstructured data into clean, understandable, and actionable insights.
+
+KEY CONTRIBUTIONS:
+- Reduced confusion around a large, complex dataset by providing clear documentation.
+- Improved team understanding and decision-making through structured analysis and reporting.
+- Enhanced data quality and usability, enabling smoother downstream modeling and analytics work.
+
+TYPE: [WORK EXPERIENCE]
+Organization: Tata Power WODL
+Duration: June 2025 – July 2025
+Designation: Quality Analyst
+
+KEY CONTRIBUTIONS:
+- Gained hands-on exposure to electricity distribution and smart meter operations.
+- Analyzed digital complaint and new connection workflows.
+- Understood field-to-system integration and service reporting processes.

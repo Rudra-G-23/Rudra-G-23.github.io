@@ -1,0 +1,28 @@
+TYPE: [SKILLS]
+Rudra has strong programming skills in Python and SQL.
+
+He works with data processing libraries such as Pandas, NumPy, and Polars.
+
+He uses visualization tools including Plotly, Power BI, Matplotlib, and Seaborn.
+
+He has experience with machine learning libraries such as Scikit-learn and XGBoost.
+
+He has worked with deep learning frameworks including PyTorch and TensorFlow.
+
+He has knowledge of LLMs and frameworks like LangChain and Hugging Face.
+
+He has experience with backend tools such as FastAPI and Pydantic.
+
+He is familiar with big data tools such as PySpark and Parquet.
+
+He has worked with cloud platforms like AWS.
+
+He has experience with databases including PostgreSQL, Snowflake, BigQuery, and Databricks.
+
+He understands probability, statistical modeling, hypothesis testing, and A/B testing.
+
+He has knowledge of time series forecasting, PCA, and hyperparameter tuning.
+
+He uses tools such as Git, MLflow, Jupyter Notebook, and VS Code.
+
+He has strong problem-solving, analytical thinking, and stakeholder communication skills.
