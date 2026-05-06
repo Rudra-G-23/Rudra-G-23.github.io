@@ -2,48 +2,38 @@ TYPE: [OPEN SOURCE PROJECT]
 Name: show-file-tree
 Type: Open Source CLI Tool
 Description:
-A small, fast command-line tool to display styled file and folder trees.
-
+Rudra Prasad Bhuyan developed 'show-file-tree', a small, fast command-line tool designed to display beautifully styled file and folder trees in the terminal.
 Problem:
-Developers need a clean and customizable way to visualize project directory structures.
-
+Software developers frequently need a clean, readable, and customizable way to visually inspect and share complex project directory structures.
 Solution:
-Built a CLI tool that generates visually structured file trees with styling and customization options.
-
-Technologies:
-Python, CLI Development
-
+Rudra built a Python-based CLI tool that automatically generates visually structured file trees, offering extensive styling and customization options.
+Technologies Used:
+Rudra utilized Python and modern CLI Development techniques to build this open source utility.
 Key Features:
-- Styled file tree output
-- Supports colors and icons
-- Displays metadata for files and folders
-- Lightweight and fast
-
-Project Link:
+- Rudra's tool generates highly styled and readable file tree outputs.
+- The tool natively supports terminal colors and file type icons.
+- It can extract and display important metadata for files and folders directly in the tree.
+- Rudra ensured the tool remains extremely lightweight and fast to execute.
+Project Links:
 GitHub: https://github.com/Rudra-G-23/show-file-tree
-Docs: https://rudra-g-23.github.io/show-file-tree/
+Documentation: https://rudra-g-23.github.io/show-file-tree/
+
 
 TYPE: [OPEN SOURCE PROJECT]
 Name: find-my-joint
 Type: Open Source Data Utility
 Description:
-A utility to identify potential join keys across multiple pandas DataFrames.
-
+Rudra Prasad Bhuyan created 'find-my-joint', a highly useful data utility designed to automatically identify potential join keys across multiple pandas DataFrames.
 Problem:
-Finding matching columns between datasets is time-consuming and error-prone.
-
+For data scientists, manually finding matching columns between large, unfamiliar datasets is highly time-consuming and heavily error-prone.
 Solution:
-Developed a tool that scans multiple DataFrames and suggests possible join keys automatically.
-
-Technologies:
-Python, Pandas
-
+Rudra developed an automated tool that intelligently scans multiple DataFrames, analyzes their contents, and suggests the best possible join keys automatically.
+Technologies Used:
+Rudra utilized Python and the Pandas library to develop this open source data engineering utility.
 Key Features:
-- Detects matching columns across datasets
-- Simplifies data merging process
-- Reduces manual effort in data analysis
-
-Project Link:
+- Rudra's utility automatically detects matching columns and data types across multiple diverse datasets.
+- The tool drastically simplifies the complex data merging and joining process for data engineers.
+- It significantly reduces the manual effort and time required in the initial stages of data analysis.
+Project Links:
 GitHub: https://github.com/Rudra-G-23/Find-My-Joint
-Docs: https://rudra-g-23.github.io/Find-My-Joint/
-
+Documentation: https://rudra-g-23.github.io/Find-My-Joint/

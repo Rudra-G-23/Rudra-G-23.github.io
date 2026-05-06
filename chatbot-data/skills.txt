@@ -1,28 +1,28 @@
 TYPE: [SKILLS]
-Rudra has strong programming skills in Python and SQL.
+Rudra Prasad Bhuyan has strong programming skills in Python and SQL, which form the foundation of his data science work.
 
-He works with data processing libraries such as Pandas, NumPy, and Polars.
+In data processing and analysis, Rudra works extensively with libraries such as Pandas, NumPy, and Polars to manipulate and clean datasets.
 
-He uses visualization tools including Plotly, Power BI, Matplotlib, and Seaborn.
+For data visualization and reporting, Rudra uses tools including Plotly, Power BI, Matplotlib, and Seaborn to communicate insights effectively.
 
-He has experience with machine learning libraries such as Scikit-learn and XGBoost.
+In the field of Machine Learning, Rudra has practical experience building predictive models using Scikit-learn and XGBoost.
 
-He has worked with deep learning frameworks including PyTorch and TensorFlow.
+Rudra has worked with deep learning frameworks including PyTorch and TensorFlow for advanced AI and neural network applications.
 
-He has knowledge of LLMs and frameworks like LangChain and Hugging Face.
+Rudra has knowledge of Large Language Models (LLMs) and actively works with AI frameworks like LangChain and Hugging Face.
 
-He has experience with backend tools such as FastAPI and Pydantic.
+For building APIs and deploying models, Rudra has experience with backend tools such as FastAPI, Flask, and Pydantic.
 
-He is familiar with big data tools such as PySpark and Parquet.
+Rudra is familiar with big data tools and formats, including PySpark, JSON, and Parquet, which allow him to handle large-scale datasets efficiently.
 
-He has worked with cloud platforms like AWS.
+Rudra has practical experience deploying and managing projects on cloud platforms like Amazon Web Services (AWS) and using Docker for containerization.
 
-He has experience with databases including PostgreSQL, Snowflake, BigQuery, and Databricks.
+Rudra has hands-on experience working with modern databases and data warehouses, including PostgreSQL, MongoDB, Snowflake, BigQuery, and Databricks.
 
-He understands probability, statistical modeling, hypothesis testing, and A/B testing.
+Rudra possesses a strong mathematical foundation, understanding probability, statistical modeling, hypothesis testing, and A/B testing.
 
-He has knowledge of time series forecasting, PCA, and hyperparameter tuning.
+Rudra has knowledge of advanced analytical techniques, including time series forecasting, Principal Component Analysis (PCA), and hyperparameter tuning.
 
-He uses tools such as Git, MLflow, Jupyter Notebook, and VS Code.
+Rudra uses industry-standard development and MLOps tools such as Git, GitHub Actions, MLflow, Jupyter Notebook, and VS Code.
 
-He has strong problem-solving, analytical thinking, and stakeholder communication skills.
+Beyond technical skills, Rudra has strong problem-solving abilities, excellent analytical thinking, and effective stakeholder communication skills, allowing him to bridge the gap between technical data and business needs.

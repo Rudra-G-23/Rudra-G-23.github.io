@@ -1,31 +1,31 @@
 TYPE: [WORK EXPERIENCE]
 Organization: SBC LABS
-Duration: Nov 2025 – Feb 2026
-Designation: Jr. Data scientist
+Duration: November 2025 – February 2026
+Designation: Jr. Data Scientist
 
-RESPONSIBILITIES IN SBC LABS:
-- Analyzed a large-scale dataset with 400+ features, identifying which data points were truly useful for the project.
-- Performed extensive data cleaning and preprocessing improving data quality and preparing it for modeling.
-- Carried out a complete feature-by-feature and table-by-table analysis to understand data meaning, structure, and relationships.
+RESPONSIBILITIES AT SBC LABS:
+At SBC LABS, Rudra Prasad Bhuyan analyzed a large-scale dataset containing over 400 features, successfully identifying which data points were truly useful and relevant for the project's goals.
+Rudra performed extensive data cleaning and preprocessing at SBC LABS, significantly improving data quality and preparing the datasets for accurate machine learning modeling.
+Rudra carried out a complete feature-by-feature and table-by-table analysis to thoroughly understand the data's meaning, structure, and underlying relationships.
 
-ACHIEVEMENTS IN SBC LABS:
-- Created a detailed feature requirement & documentation sheets that clarified the purpose of each feature for the entire team.
-- Used a User data understanding approach to match stored data with real project needs and ensure feature relevance.
-- Provided clarity to the team by explaining what the data actually represents and which features should be prioritized.
-- Submitted weekly progress reports and communicated findings effectively to both technical and non-technical members.
-- Helped the team make informed decisions by converting messy, unstructured data into clean, understandable, and actionable insights.
+ACHIEVEMENTS AT SBC LABS:
+During his time at SBC LABS, Rudra created detailed feature requirement and documentation sheets that clarified the purpose of each feature for the entire engineering and data team.
+Rudra used a User Data Understanding approach to match the stored data with real project needs, ensuring maximum feature relevance and accuracy.
+Rudra provided crucial clarity to his team by explaining exactly what the complex data represented and identifying which features should be prioritized for development.
+Rudra submitted weekly progress reports and effectively communicated his analytical findings to both technical and non-technical team members at SBC LABS.
+Rudra helped the SBC LABS team make informed, data-driven decisions by converting messy, unstructured data into clean, understandable, and actionable insights.
 
-KEY CONTRIBUTIONS IN SBC LABS:
-- Reduced confusion around a large, complex dataset by providing clear documentation.
-- Improved team understanding and decision-making through structured analysis and reporting.
-- Enhanced data quality and usability, enabling smoother downstream modeling and analytics work.
+KEY CONTRIBUTIONS AT SBC LABS:
+Rudra's primary contribution at SBC LABS was reducing confusion around a massive, complex dataset by providing clear, comprehensive documentation.
+Rudra improved overall team understanding and accelerated decision-making processes through his structured data analysis and reporting.
+Rudra enhanced the organization's data quality and usability, which enabled smoother downstream machine learning modeling and analytics workflows.
 
 TYPE: [WORK EXPERIENCE]
 Organization: Tata Power WODL
 Duration: June 2025 – July 2025
 Designation: Quality Analyst
 
-KEY CONTRIBUTIONS IN TATA POWER:
-- Gained hands-on exposure to electricity distribution and smart meter operations.
-- Analyzed digital complaint and new connection workflows.
-- Understood field-to-system integration and service reporting processes.
+KEY CONTRIBUTIONS AT TATA POWER WODL:
+As a Quality Analyst at Tata Power WODL, Rudra Prasad Bhuyan gained valuable hands-on exposure to electricity distribution systems and smart meter operations.
+Rudra successfully analyzed digital consumer complaint systems and evaluated new connection workflows to identify operational improvements.
+At Tata Power, Rudra developed a strong understanding of field-to-system integration, ensuring accurate service reporting processes between on-ground teams and digital databases.

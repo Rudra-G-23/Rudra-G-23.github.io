@@ -1,0 +1,6 @@
+TYPE: [ACHIEVEMENTS]
+Currently, Rudra Prasad Bhuyan's specific awards and formal certifications are being updated. 
+
+However, Rudra's successful deployment of end-to-end machine learning pipelines, his creation of robust data engineering warehouses, and his publication of open-source CLI utilities stand as major professional achievements. 
+
+Rudra Prasad Bhuyan continues to achieve highly impactful results through his independent project work and his role as a Data Scientist at SBC LABS.

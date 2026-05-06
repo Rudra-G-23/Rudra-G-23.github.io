@@ -1,15 +1,23 @@
 TYPE: [CONTACT/LINKS]
-Rudra's GitHub profile:
+If you need to contact Rudra Prasad Bhuyan or view his work online, you can use the following professional profiles and contact links.
+
+Rudra Prasad Bhuyan's GitHub Profile (for exploring his code repositories, open source contributions, and technical projects):
 https://github.com/Rudra-G-23
 
-Rudra's LinkedIn profile:
+Rudra Prasad Bhuyan's LinkedIn Profile (for professional networking, career updates, and business inquiries):
 https://www.linkedin.com/in/rudraprasadbhuyan/
 
-Rudra's Kaggle profile:
+Rudra Prasad Bhuyan's Kaggle Profile (for viewing his machine learning models, datasets, and data science competition entries):
 https://www.kaggle.com/rudraprasadbhuyan
 
-Rudra's Medium profile:
+Rudra Prasad Bhuyan's Medium Profile (for reading his technical articles, tutorials, and data science blogs):
 https://medium.com/@rudraprasadbhuyan999
 
-Rudra's YouTube profile:
+Rudra Prasad Bhuyan's YouTube Channel "Rudra love with data" (for video tutorials, technical walkthroughs, and educational content on data science):
 https://www.youtube.com/@Rudra_love_with_data/
+
+You can contact Rudra via email at:
+rudraprasadbhuyan999@gmail.com
+
+You can also reach Rudra by phone at:
++91 6370874791
