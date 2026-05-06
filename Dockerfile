@@ -1,5 +1,5 @@
 # Use the slim base image
-FROM python:3.10-slim
+FROM python:3.10
 
 # Set the folder inside the container where your code will live
 WORKDIR /code
