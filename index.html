@@ -377,9 +377,14 @@
                             <p class="text-xs text-zinc-400">Nov 2025 – Feb 2026</p>
                         </div>
 
-                        <button onclick="toggleExp(this)" class="ml-auto text-[#2664eb]">
-                            <i class="fa-solid fa-chevron-down transition-transform"></i>
-                        </button>
+                        <div class="ml-auto flex items-center gap-4">
+                            <button onclick="askBot('Tell me about your Work Experience at SBC Labs')" class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleExp(this)" class="text-[#2664eb]">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
@@ -430,9 +435,14 @@
                             <p class="text-xs text-zinc-400">June 2025 – July 2025</p>
                         </div>
 
-                        <button onclick="toggleExp(this)" class="ml-auto md:ml-0 md:mr-auto text-[#2664eb]">
-                            <i class="fa-solid fa-chevron-down transition-transform"></i>
-                        </button>
+                        <div class="ml-auto md:ml-0 md:mr-auto flex items-center md:flex-row-reverse gap-4">
+                            <button onclick="toggleExp(this)" class="text-[#2664eb]">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                            <button onclick="askBot('Tell me about your Work Experience at Tata Power')" class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                        </div>
                     </div>
 
                     <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
@@ -473,7 +483,7 @@
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">show-file-tree</h3>
                 <p class="text-zinc-600 mb-6">A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.</p>
-                <div class="flex gap-4">
+                <div class="flex flex-wrap gap-4 items-center">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-cube text-xs"></i> PyPI
@@ -486,13 +496,16 @@
                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
+                    <button onclick="askBot('Tell me about the show-file-tree open source project')" class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
+                        <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                    </button>
                 </div>
             </div>
 
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">find-my-joint</h3>
                 <p class="text-zinc-600 mb-6">A utility to find potential join keys (matching columns) across multiple pandas DataFrames.</p>
-                <div class="flex gap-4">
+                <div class="flex flex-wrap gap-4 items-center">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-cube text-xs"></i> PyPI
@@ -505,6 +518,9 @@
                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
+                    <button onclick="askBot('Tell me about the find-my-joint open source project')" class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
+                        <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                    </button>
                 </div>
             </div>
 
@@ -549,9 +565,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the Vehicle Insurance Risk Prediction project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -598,9 +619,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the SQL Modern Data Warehouse project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -646,9 +672,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the Yelp Big Data Analysis project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -694,9 +725,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the Breast Cancer Prediction App project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -741,9 +777,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the Transportation & Logistic Dashboard project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -788,9 +829,14 @@
                 View Project →
             </a>
 
-            <button onclick="toggleDetails(this)">
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <button onclick="askBot('Tell me about the Smart Transaction Ledger project')" class="hover:scale-110 transition-transform" title="Ask AI">
+                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                </button>
+                <button onclick="toggleDetails(this)">
+                    <i class="fa-solid fa-chevron-down transition-transform"></i>
+                </button>
+            </div>
 
         </div>
 
@@ -1118,6 +1164,25 @@
 
         function toggleProfileMenu() {
             profileMenu.classList.toggle('hidden');
+        }
+
+        function askBot(query) {
+            const chatModal = document.getElementById('chatbot-modal');
+            const chatBubble = document.getElementById('chatbot-bubble');
+            
+            // Open modal if closed
+            if (chatModal.classList.contains('hidden')) {
+                chatModal.classList.remove('hidden');
+                chatModal.classList.add('flex');
+            }
+            // Hide bubble if visible
+            if (chatBubble && !chatBubble.classList.contains('hidden')) {
+                chatBubble.classList.add('hidden');
+            }
+            
+            // Populate input but don't auto-send
+            chatInput.value = query;
+            chatInput.focus();
         }
 
         function sendSuggestion(text) {
