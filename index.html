@@ -1121,6 +1121,7 @@
         const profileMenu = document.getElementById('profile-menu');
         const chatMessages = document.getElementById('chat-messages');
         const chatInput = document.getElementById('chat-input');
+        let isFirstMessage = true;
         
         // Hide profile menu when clicking outside
         document.addEventListener('click', (e) => {
@@ -1244,6 +1245,23 @@
             
             addMessage(text, 'user');
             
+            let infoPopup = null;
+            if (isFirstMessage) {
+                isFirstMessage = false;
+                infoPopup = document.createElement('div');
+                infoPopup.className = 'text-center text-xs text-zinc-600 my-2 bg-yellow-50 border border-yellow-200 rounded-lg p-2 mx-auto w-11/12 shadow-sm transition-opacity duration-300';
+                infoPopup.innerHTML = '<i class="fa-solid fa-clock text-yellow-500 mr-1"></i> As this is your first message, the server might take some time to wake up and respond. Please be patient!';
+                chatMessages.appendChild(infoPopup);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                setTimeout(() => {
+                    if (infoPopup && infoPopup.parentNode) {
+                        infoPopup.style.opacity = '0';
+                        setTimeout(() => infoPopup.remove(), 300);
+                    }
+                }, 20000);
+            }
+            
             // Typing indicator
             const typingDiv = document.createElement('div');
             typingDiv.id = 'typing-indicator';
@@ -1326,9 +1344,15 @@
                     botText = JSON.stringify(data);
                 }
                 
+                if (infoPopup && infoPopup.parentNode) {
+                    infoPopup.remove();
+                }
                 document.getElementById('typing-indicator').remove();
                 addMessage(botText, 'bot');
             } catch (error) {
+                if (infoPopup && infoPopup.parentNode) {
+                    infoPopup.remove();
+                }
                 document.getElementById('typing-indicator').remove();
                 addMessage('Sorry, I encountered an error connecting to the server.', 'bot');
             }
