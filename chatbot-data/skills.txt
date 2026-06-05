@@ -15,6 +15,8 @@ For building APIs and deploying models, Rudra has experience with backend tools 
 
 Rudra is familiar with big data tools and formats, including PySpark, JSON, and Parquet, which allow him to handle large-scale datasets efficiently.
 
+Rudra is familiar with tools which is helps to build the agents, autonomous tools he know LangChain, LangGraph, LangSmith.
+
 Rudra has practical experience deploying and managing projects on cloud platforms like Amazon Web Services (AWS) and using Docker for containerization.
 
 Rudra has hands-on experience working with modern databases and data warehouses, including PostgreSQL, MongoDB, Snowflake, BigQuery, and Databricks.
