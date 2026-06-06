@@ -123,9 +123,27 @@
             box-shadow: 0 0 0 1px #2563eb;
         }
 
+        /* ─── Intro Animation ─── */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .typing-cursor {
+            border-right: 4px solid #2563eb;
+            animation: blink 1s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
+
+    <!-- ═══════════════════════════════════════════════
+         INTRO ANIMATION
+    ════════════════════════════════════════════════ -->
+    <div id="intro-animation" class="fixed inset-0 bg-white z-[120] flex items-center justify-center transition-opacity duration-1000 px-4">
+        <h1 id="typewriter-text" class="text-xl sm:text-3xl md:text-5xl font-mono font-bold text-zinc-900 typing-cursor pr-2 max-w-full text-center leading-snug"></h1>
+    </div>
 
     <!-- ═══════════════════════════════════════════════
          NAVIGATION
@@ -952,7 +970,7 @@
     <!-- ═══════════════════════════════════════════════
          CHATBOT
     ════════════════════════════════════════════════ -->
-    <div id="chatbot-container" class="fixed bottom-6 right-6 z-[100] font-sans">
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-[100] font-sans opacity-0 pointer-events-none transition-opacity duration-1000">
         
         <!-- Attraction Bubble -->
         <div id="chatbot-bubble" class="absolute bottom-20 right-0 mb-2 w-56 bg-white border border-zinc-200 shadow-xl rounded-2xl p-3 text-sm text-zinc-700 origin-bottom-right transition-all duration-300 animate-bounce">
@@ -1369,6 +1387,43 @@
             }
         }
 
+    </script>
+
+    <!-- Intro Typing Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = "Hello, Data Points 👋";
+            const element = document.getElementById('typewriter-text');
+            const container = document.getElementById('intro-animation');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            let i = 0;
+            
+            // Disable scrolling while animation is playing
+            document.body.style.overflow = 'hidden';
+
+            function typeWriter() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50); // Typing speed
+                } else {
+                    // Wait a few seconds, then fade out
+                    setTimeout(() => {
+                        container.style.opacity = '0';
+                        if (chatbotContainer) {
+                            chatbotContainer.classList.remove('opacity-0', 'pointer-events-none');
+                        }
+                        setTimeout(() => {
+                            container.style.display = 'none';
+                            document.body.style.overflow = ''; // Re-enable scrolling
+                        }, 1000); // Match transition duration
+                    }, 1000); // Time to wait after typing
+                }
+            }
+
+            // Start typing after a short delay
+            setTimeout(typeWriter, 300);
+        });
     </script>
 
 </body>
