@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,14 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    
+
     <!-- Marked.js for Markdown Parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome (covers UI icons + brand icons: GitHub, LinkedIn, Kaggle) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -104,29 +107,43 @@
         }
 
         /* ─── Utility ───────────────────────────────── */
-        .text-accent  { color: var(--color-accent); }
-        .bg-accent    { background-color: var(--color-accent); }
-        .font-mono    { font-family: var(--font-mono); }
+        .text-accent {
+            color: var(--color-accent);
+        }
+
+        .bg-accent {
+            background-color: var(--color-accent);
+        }
+
+        .font-mono {
+            font-family: var(--font-mono);
+        }
 
         .details {
             transition: all 0.3s ease;
         }
+
         .expand-btn i {
             transition: transform 0.3s ease;
         }
+
         .rotate-180 {
             transform: rotate(180deg);
         }
 
         .project-card:hover {
-            border-color: #2563eb; /* blue-600 */
+            border-color: #2563eb;
+            /* blue-600 */
             box-shadow: 0 0 0 1px #2563eb;
         }
 
         /* ─── Intro Animation ─── */
         @keyframes blink {
-            50% { border-color: transparent; }
+            50% {
+                border-color: transparent;
+            }
         }
+
         .typing-cursor {
             border-right: 4px solid #2563eb;
             animation: blink 1s step-end infinite;
@@ -136,13 +153,17 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ═══════════════════════════════════════════════
          INTRO ANIMATION
     ════════════════════════════════════════════════ -->
-    <div id="intro-animation" class="fixed inset-0 bg-white z-[120] flex items-center justify-center transition-opacity duration-1000 px-4">
-        <h1 id="typewriter-text" class="text-xl sm:text-3xl md:text-5xl font-mono font-bold text-zinc-900 typing-cursor pr-2 max-w-full text-center leading-snug"></h1>
+    <div id="intro-animation"
+        class="fixed inset-0 bg-white z-[120] flex items-center justify-center transition-opacity duration-1000 px-4">
+        <h1 id="typewriter-text"
+            class="text-xl sm:text-3xl md:text-5xl font-mono font-bold text-zinc-900 typing-cursor pr-2 max-w-full text-center leading-snug">
+        </h1>
     </div>
 
     <!-- ═══════════════════════════════════════════════
@@ -155,12 +176,12 @@
 
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="#about"      class="nav-link">About</a>
-                <a href="#skills"     class="nav-link">Skills</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Work Experience</a>
                 <a href="#opensource" class="nav-link">Open Source</a>
-                <a href="#projects"   class="nav-link">Projects</a>
-                <a href="#contact"    class="nav-link">Contact</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
 
             <!-- Mobile Toggle -->
@@ -171,43 +192,52 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300">
+    </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] hidden-drawer flex flex-col p-8 md:hidden">
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] hidden-drawer flex flex-col p-8 md:hidden">
         <div class="flex justify-end mb-8">
             <button id="mobile-menu-close" class="p-2 text-zinc-600 hover:text-accent">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
 
-            <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6">
 
-                <a href="#about" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-user"></i> About
-                </a>
+            <a href="#about"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-user"></i> About
+            </a>
 
-                <a href="#skills" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-code"></i> Skills
-                </a>
+            <a href="#skills"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-code"></i> Skills
+            </a>
 
-                <a href="#experience" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-briefcase"></i> Experience
-                </a>
+            <a href="#experience"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-briefcase"></i> Experience
+            </a>
 
-                <a href="#opensource" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-globe"></i> Open Source
-                </a>
+            <a href="#opensource"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-globe"></i> Open Source
+            </a>
 
-                <a href="#projects" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-diagram-project"></i> Projects
-                </a>
+            <a href="#projects"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-diagram-project"></i> Projects
+            </a>
 
-                <a href="#contact" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
-                    <i class="fa-solid fa-envelope"></i> Contact
-                </a>
+            <a href="#contact"
+                class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-600 hover:text-accent">
+                <i class="fa-solid fa-envelope"></i> Contact
+            </a>
 
-            </div>
+        </div>
 
     </div>
 
@@ -218,11 +248,8 @@
     <header id="about" class="section-container pt-32 pb-16">
 
         <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
-            <img
-                src="assets/profile-pic.jpeg"
-                alt="Rudra Prasad Bhuyan"
-                class="w-32 h-32 rounded-lg object-cover border border-zinc-200"
-            />
+            <img src="assets/profile-pic.jpeg" alt="Rudra Prasad Bhuyan"
+                class="w-32 h-32 rounded-lg object-cover border border-zinc-200" />
             <div>
                 <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Rudra Prasad Bhuyan</h1>
                 <p class="text-xl text-zinc-600 font-medium">Aspiring Data Scientist | ML Engineer</p>
@@ -240,20 +267,18 @@
         <div class="flex flex-wrap gap-4">
 
             <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
-               target="_blank"
-               class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+                target="_blank"
+                class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i class="fa-solid fa-file-lines"></i> Resume
             </a>
 
-            <a href="https://github.com/Rudra-G-23"
-               target="_blank"
-               class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+            <a href="https://github.com/Rudra-G-23" target="_blank"
+                class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
 
-            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/"
-               target="_blank"
-               class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
+            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank"
+                class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
 
@@ -271,117 +296,137 @@
         <div class="flex flex-wrap gap-3 mt-4">
 
             <!-- Languages -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-code text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Python, SQL</span>
             </div>
 
             <!-- Data Analysis -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-chart-line text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Pandas, NumPy</span>
             </div>
 
             <!-- Visualization -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-chart-pie text-[#2664eb]"></i>              
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+                <i class="fa-solid fa-chart-pie text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Plotly, Matplotlib, Seaborn</span>
             </div>
 
             <!-- Dashboard -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 </i><i class="fa-solid fa-chalkboard-user text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Power BI, Looker Studio</span>
             </div>
 
             <!-- Machine Learning -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-brain text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Scikit-learn, XGBoost, CatBoost</span>
             </div>
 
             <!-- MLOps -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-gears text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> GitHub, MLflow, CI/CD</span>
             </div>
 
             <!-- Backend -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-server text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Pydantic, FastAPI</span>
             </div>
 
             <!-- Big Data -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-database text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> PySpark, Polars</span>
             </div>
 
             <!-- Cloud -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-cloud text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> AWS</span>
             </div>
 
             <!-- Warehousing -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-layer-group text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> PostgreSQL, Snowflake, BigQuery, Databricks</span>
             </div>
 
             <!-- Deep Learning -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-network-wired text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> PyTorch, TensorFlow, Keras</span>
             </div>
 
             <!-- GenAI -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-robot text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> LLMs, ChatGPT, Groq, Llama, Claude, HuggingFace</span>
             </div>
 
             <!-- GenAI Tool -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-circle-nodes text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> LangChain, LangGraph, LangSmith</span>
             </div>
 
             <!-- Stats -->
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-dice-six text-[#2664eb]"></i>
                 <span class="text-sm text-zinc-700"> Probability, Statistical Modeling</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-square-root-variable text-[#2664eb]"></i>
                 <span class="text-zinc-600"> Hypothesis Testing, A/B Testing</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-laptop-code text-[#2664eb]"></i>
                 <span class="text-zinc-600"> Git, Jupyter Notebook, VS Code</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-clock text-[#2664eb]"></i>
                 <span class="text-zinc-600"> Time Series Forecasting, PCA</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-sliders text-[#2664eb]"></i>
                 <span class="text-zinc-600"> Hyperparameter Tuning</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-people-group text-[#2664eb]"></i>
                 <span class="text-zinc-600"> Storytelling, Stakeholder Communication</span>
             </div>
 
-            <div class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
+            <div
+                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
                 <i class="fa-solid fa-person-hiking text-[#2664eb]"></i>
-                <span class="text-zinc-600">  Problem Solving, Analytical Thinking</span>
+                <span class="text-zinc-600"> Problem Solving, Analytical Thinking</span>
             </div>
 
         </div>
@@ -404,7 +449,8 @@
             <div class="relative mb-10">
                 <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2664eb] rounded-full"></div>
 
-                <div class="exp-card md:ml-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all">
+                <div
+                    class="exp-card md:ml-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all">
 
                     <div class="flex items-center">
                         <div>
@@ -414,7 +460,8 @@
                         </div>
 
                         <div class="ml-auto flex items-center gap-4">
-                            <button onclick="askBot('Tell me about your Work Experience at SBC Labs')" class="hover:scale-110 transition-transform" title="Ask AI">
+                            <button onclick="askBot('Tell me about your Work Experience at SBC Labs')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
                                 <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
                             </button>
                             <button onclick="toggleExp(this)" class="text-[#2664eb]">
@@ -428,32 +475,48 @@
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Developed Python and SQL ETL pipelines for 15 multi-level HCES datasets with 400+ features to streamline large-scale batch processing.</p>
+                                <p>Project I have working <a
+                                        href="https://github.com/Rudra-G-23/rural-financial-inclusion-govt-scheme-recommendation"
+                                        target="_blank" class="text-blue-600 hover:underline font-medium">Fin4Rural
+                                        (Indian Level)</a> | <a href="https://github.com/Rudra-G-23/bihar-viz-dashboard"
+                                        target="_blank" class="text-blue-600 hover:underline font-medium">Bihar
+                                        Dashboard (State Level)</a>.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Analyzed 500+ socioeconomic and healthcare variables to identify trends in finance, healthcare, consumption, and savings behavior.</p>
+                                <p>Developed Python and SQL ETL pipelines for 15 multi-level HCES datasets with 400+
+                                    features to streamline large-scale batch processing.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Automated data validation and duplicate-handling workflows using SQL procedures, reducing data inconsistencies by 20%.</p>
+                                <p>Analyzed 500+ socioeconomic and healthcare variables to identify trends in finance,
+                                    healthcare, consumption, and savings behavior.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Built reusable data preprocessing scripts in Python, reducing manual model-preparation effort and saving ~1 hour daily.</p>
+                                <p>Automated data validation and duplicate-handling workflows using SQL procedures,
+                                    reducing data inconsistencies by 20%.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Designed scalable system architecture, PRD documentation, and 30+ analytical reports to standardize workflows and business planning.</p>
+                                <p>Built reusable data preprocessing scripts in Python, reducing manual
+                                    model-preparation effort and saving ~1 hour daily.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Built interactive KPI dashboards across 50+ parameters and collaborated with stakeholders to deliver actionable insights and summaries.</p>
+                                <p>Designed scalable system architecture, PRD documentation, and 30+ analytical reports
+                                    to standardize workflows and business planning.</p>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                                <p>Built interactive KPI dashboards across 50+ parameters and collaborated with
+                                    stakeholders to deliver actionable insights and summaries.</p>
                             </div>
 
                         </div>
@@ -463,11 +526,12 @@
             </div>
 
             <!-- LEFT CARD -->
-            <!-- Tata Power -->             
+            <!-- Tata Power -->
             <div class="relative mb-10">
                 <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2664eb] rounded-full"></div>
 
-                <div class="exp-card md:mr-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all text-left md:text-right">
+                <div
+                    class="exp-card md:mr-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all text-left md:text-right">
 
                     <div class="flex items-center md:flex-row-reverse">
                         <div>
@@ -480,7 +544,8 @@
                             <button onclick="toggleExp(this)" class="text-[#2664eb]">
                                 <i class="fa-solid fa-chevron-down transition-transform"></i>
                             </button>
-                            <button onclick="askBot('Tell me about your Work Experience at Tata Power')" class="hover:scale-110 transition-transform" title="Ask AI">
+                            <button onclick="askBot('Tell me about your Work Experience at Tata Power')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
                                 <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
                             </button>
                         </div>
@@ -491,21 +556,24 @@
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Observed and analyzed smart meter data workflows for 60,000+ consumers, centralized database operations and issue-tracking processes.</p>
+                                <p>Observed and analyzed smart meter data workflows for 60,000+ consumers, centralized
+                                    database operations and issue-tracking processes.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Assisted in field-to-database survey operations with a 20-member team, supporting digital meter updates, and complaint-handling workflows.</p>
+                                <p>Assisted in field-to-database survey operations with a 20-member team, supporting
+                                    digital meter updates, and complaint-handling workflows.</p>
                             </div>
 
                             <div class="flex items-start gap-2">
                                 <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Gained exposure to image-processing and grid monitoring systems used to identify human errors, detect irregularities operational planning.</p>
+                                <p>Gained exposure to image-processing and grid monitoring systems used to identify
+                                    human errors, detect irregularities operational planning.</p>
                             </div>
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -523,21 +591,23 @@
 
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">show-file-tree</h3>
-                <p class="text-zinc-600 mb-6">A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.</p>
+                <p class="text-zinc-600 mb-6">A small, fast CLI tool to display styled file/folder trees with rich
+                    options, colors, icons, and metadata.</p>
                 <div class="flex flex-wrap gap-4 items-center">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-cube text-xs"></i> PyPI
                     </a>
                     <a href="https://rudra-g-23.github.io/show-file-tree/" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-book text-xs"></i> Docs
                     </a>
                     <a href="https://github.com/Rudra-G-23/show-file-tree" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
-                    <button onclick="askBot('Tell me about the show-file-tree open source project')" class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
+                    <button onclick="askBot('Tell me about the show-file-tree open source project')"
+                        class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
                         <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
                     </button>
                 </div>
@@ -545,21 +615,23 @@
 
             <div class="bucket">
                 <h3 class="text-xl font-bold mb-2">find-my-joint</h3>
-                <p class="text-zinc-600 mb-6">A utility to find potential join keys (matching columns) across multiple pandas DataFrames.</p>
+                <p class="text-zinc-600 mb-6">A utility to find potential join keys (matching columns) across multiple
+                    pandas DataFrames.</p>
                 <div class="flex flex-wrap gap-4 items-center">
                     <a href="https://pypi.org/user/Rudra_Prasad_Bhuyan/" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-cube text-xs"></i> PyPI
                     </a>
                     <a href="https://rudra-g-23.github.io/Find-My-Joint/" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-solid fa-book text-xs"></i> Docs
                     </a>
                     <a href="https://github.com/Rudra-G-23/Find-My-Joint" target="_blank"
-                       class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
+                        class="text-sm font-semibold text-accent hover:underline flex items-center gap-1">
                         <i class="fa-brands fa-github text-xs"></i> GitHub
                     </a>
-                    <button onclick="askBot('Tell me about the find-my-joint open source project')" class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
+                    <button onclick="askBot('Tell me about the find-my-joint open source project')"
+                        class="ml-auto hover:scale-110 transition-transform" title="Ask AI">
                         <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
                     </button>
                 </div>
@@ -576,330 +648,330 @@
         <span class="label">Featured Projects</span>
         <div class="grid md:grid-cols-2 gap-6">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/vehicle-insurance-project.png" 
-         class="w-full h-48 object-cover">
+                <!-- BIG IMAGE -->
+                <img src="assets/project/vehicle-insurance-project.png" class="w-full h-48 object-cover">
 
-    <div class="p-4">
+                <div class="p-4">
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">Vehicle Insurance Risk Prediction</h3>
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">Vehicle Insurance Risk Prediction</h3>
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            Insurance companies need to estimate vehicle risk to reduce loss and price policies correctly.
-        </p>
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        Insurance companies need to estimate vehicle risk to reduce loss and price policies correctly.
+                    </p>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            Python • Flask • AWS • Docker
-        </p>
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Python • Flask • AWS • Docker
+                    </p>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-            <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                        <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" target="_blank"
+                            class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the Vehicle Insurance Risk Prediction project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the Vehicle Insurance Risk Prediction project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Built end-to-end MLOps pipeline</li>
+                            <li>• Integrated MongoDB + AWS</li>
+                            <li>• CI/CD with GitHub Actions & Docker</li>
+                            <li>• Flask app for real-time prediction</li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
 
-        </div>
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Built end-to-end MLOps pipeline</li>
-                <li>• Integrated MongoDB + AWS</li>
-                <li>• CI/CD with GitHub Actions & Docker</li>
-                <li>• Flask app for real-time prediction</li>
-            </ul>
-        </div>
+                <!-- BIG IMAGE -->
+                <img src="assets/project/data-warehouse-project.png" class="w-full h-48 object-cover">
 
-    </div>
-</div>
+                <div class="p-4">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">SQL Modern Data Warehouse</h3>
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/data-warehouse-project.png" 
-         class="w-full h-48 object-cover">
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        ERP & CRM data was inconsistent and not ready for analytics and reporting.
+                    </p>
 
-    <div class="p-4">
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        PostgreSQL • SQL • ETL • Star Schema • Power BI
+                    </p>
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">SQL Modern Data Warehouse</h3>
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            ERP & CRM data was inconsistent and not ready for analytics and reporting.
-        </p>
+                        <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" target="_blank"
+                            class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            PostgreSQL • SQL • ETL • Star Schema • Power BI
-        </p>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the SQL Modern Data Warehouse project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    </div>
 
-            <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Built Medallion architecture (Bronze–Silver–Gold) for data transformation.</li>
+                            <li>• Developed ETL pipelines integrating ERP & CRM systems.</li>
+                            <li>• Created analytical reports for sales and customer insights.</li>
+                        </ul>
+                    </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the SQL Modern Data Warehouse project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                </div>
             </div>
 
-        </div>
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Built Medallion architecture (Bronze–Silver–Gold) for data transformation.</li>
-                <li>• Developed ETL pipelines integrating ERP & CRM systems.</li>
-                <li>• Created analytical reports for sales and customer insights.</li>
-            </ul>
-        </div>
+                <!-- BIG IMAGE -->
+                <img src="assets/project/yelp-data-analysis-project.png" class="w-full h-48 object-cover">
 
-    </div>
-</div>
+                <div class="p-4">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">Yelp Big Data Analysis</h3>
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/yelp-data-analysis-project.png" 
-         class="w-full h-48 object-cover">
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        Handling large Yelp JSON datasets efficiently without memory issues.
+                    </p>
 
-    <div class="p-4">
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Python • Polars • JSON • Parquet
+                    </p>
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">Yelp Big Data Analysis</h3>
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            Handling large Yelp JSON datasets efficiently without memory issues.
-        </p>
+                        <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" target="_blank"
+                            class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            Python • Polars • JSON • Parquet
-        </p>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the Yelp Big Data Analysis project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    </div>
 
-            <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Built high-performance pipeline using Polars.</li>
+                            <li>• Converted JSON to Parquet for optimized storage.</li>
+                            <li>• Performed large-scale data analysis workflows.</li>
+                        </ul>
+                    </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the Yelp Big Data Analysis project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                </div>
             </div>
 
-        </div>
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Built high-performance pipeline using Polars.</li>
-                <li>• Converted JSON to Parquet for optimized storage.</li>
-                <li>• Performed large-scale data analysis workflows.</li>
-            </ul>
-        </div>
+                <!-- BIG IMAGE -->
+                <img src="assets/project/cancer-project.png" class="w-full h-48 object-cover">
 
-    </div>
-</div>
+                <div class="p-4">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">Breast Cancer Prediction App</h3>
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/cancer-project.png" 
-         class="w-full h-48 object-cover">
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        Need for real-time tumor classification using medical diagnostic features.
+                    </p>
 
-    <div class="p-4">
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Python • Scikit-learn • Streamlit
+                    </p>
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">Breast Cancer Prediction App</h3>
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            Need for real-time tumor classification using medical diagnostic features.
-        </p>
+                        <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" target="_blank"
+                            class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            Python • Scikit-learn • Streamlit
-        </p>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the Breast Cancer Prediction App project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    </div>
 
-            <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Built ML model using Logistic Regression.</li>
+                            <li>• Developed interactive Streamlit web app.</li>
+                        </ul>
+                    </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the Breast Cancer Prediction App project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                </div>
             </div>
 
-        </div>
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Built ML model using Logistic Regression.</li>
-                <li>• Developed interactive Streamlit web app.</li>
-            </ul>
-        </div>
+                <!-- BIG IMAGE -->
+                <img src="assets/project/transport-project.png" class="w-full h-48 object-cover">
 
-    </div>
-</div>
+                <div class="p-4">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">Transportation & Logistic Dashboard</h3>
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/transport-project.png" 
-         class="w-full h-48 object-cover">
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        Analyze logistics efficiency to reduce delays and operational costs.
+                    </p>
 
-    <div class="p-4">
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Power BI • KPI Development
+                    </p>
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">Transportation & Logistic Dashboard</h3>
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            Analyze logistics efficiency to reduce delays and operational costs.
-        </p>
+                        <a href="https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41"
+                            target="_blank" class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            Power BI • KPI Development
-        </p>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the Transportation & Logistic Dashboard project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    </div>
 
-            <a href="https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Designed dashboard analyzing supplier & customer performance.</li>
+                            <li>• Identified delay trends and key inefficiencies.</li>
+                        </ul>
+                    </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the Transportation & Logistic Dashboard project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                </div>
             </div>
 
-        </div>
+            <div
+                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
 
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Designed dashboard analyzing supplier & customer performance.</li>
-                <li>• Identified delay trends and key inefficiencies.</li>
-            </ul>
-        </div>
+                <!-- BIG IMAGE -->
+                <img src="assets/project/smart-ledger-analytics-dashboard-project.png" class="w-full h-48 object-cover">
 
-    </div>
-</div>
+                <div class="p-4">
 
-            <div class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+                    <!-- TITLE -->
+                    <h3 class="text-lg font-bold">Smart Transaction Ledger</h3>
 
-    <!-- BIG IMAGE -->
-    <img src="assets/project/smart-ledger-analytics-dashboard-project.png" 
-         class="w-full h-48 object-cover">
+                    <!-- PROBLEM -->
+                    <p class="text-sm text-zinc-500 mt-2">
+                        Smart Transaction Ledger is an AI-powered financial transaction cleaner and fraud detector.
+                    </p>
 
-    <div class="p-4">
+                    <!-- TOOLS -->
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Python • FastAPI • AI • SQL
+                    </p>
 
-        <!-- TITLE -->
-        <h3 class="text-lg font-bold">Smart Transaction Ledger</h3>
+                    <!-- ACTION ROW -->
+                    <div class="flex justify-between items-center mt-4">
 
-        <!-- PROBLEM -->
-        <p class="text-sm text-zinc-500 mt-2">
-            Smart Transaction Ledger is an AI-powered financial transaction cleaner and fraud detector.
-        </p>
+                        <a href="https://github.com/Rudra-G-23/smart-transaction-ledger" target="_blank"
+                            class="text-sm font-semibold text-blue-600 hover:underline">
+                            View Project →
+                        </a>
 
-        <!-- TOOLS -->
-        <p class="text-xs text-zinc-400 mt-2">
-            Python • FastAPI • AI • SQL
-        </p>
+                        <div class="flex items-center gap-4">
+                            <button onclick="askBot('Tell me about the Smart Transaction Ledger project')"
+                                class="hover:scale-110 transition-transform" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+                            </button>
+                            <button onclick="toggleDetails(this)">
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
 
-        <!-- ACTION ROW -->
-        <div class="flex justify-between items-center mt-4">
+                    </div>
 
-            <a href="https://github.com/Rudra-G-23/smart-transaction-ledger" 
-               target="_blank"
-               class="text-sm font-semibold text-blue-600 hover:underline">
-                View Project →
-            </a>
+                    <!-- EXPAND CONTENT -->
+                    <div class="details hidden mt-4 text-sm text-zinc-600">
+                        <ul class="space-y-2">
+                            <li>• Automated Data Cleaning</li>
+                            <li>• Fraud Detection & Monitoring</li>
+                            <li>• AI Chatbot Assistant</li>
+                            <li>• Real-Time SQL Queries</li>
+                            <li>• Interactive Dashboard</li>
+                        </ul>
+                    </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="askBot('Tell me about the Smart Transaction Ledger project')" class="hover:scale-110 transition-transform" title="Ask AI">
-                    <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                </button>
-                <button onclick="toggleDetails(this)">
-                    <i class="fa-solid fa-chevron-down transition-transform"></i>
-                </button>
+                </div>
             </div>
-
-        </div>
-
-        <!-- EXPAND CONTENT -->
-        <div class="details hidden mt-4 text-sm text-zinc-600">
-            <ul class="space-y-2">
-                <li>• Automated Data Cleaning</li>
-                <li>• Fraud Detection & Monitoring</li>
-                <li>• AI Chatbot Assistant</li>
-                <li>• Real-Time SQL Queries</li>
-                <li>• Interactive Dashboard</li>
-            </ul>
-        </div>
-
-    </div>
-</div>
 
         </div>
 
         <div class="mt-12 text-center">
             <a href="https://github.com/Rudra-G-23/Data-Science-Projects-Portflio" target="_blank"
-               class="inline-flex items-center gap-2 bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-all font-bold shadow-lg hover:shadow-blue-500/20">
+                class="inline-flex items-center gap-2 bg-zinc-900 text-white px-8 py-3 rounded-md hover:bg-blue-600 transition-all font-bold shadow-lg hover:shadow-blue-500/20">
                 <i class="fa-brands fa-github"></i> More Projects
             </a>
         </div>
@@ -915,7 +987,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
             <a href="mailto:rudraprasadbhuyan999@gmail.com"
-               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-solid fa-envelope text-xl w-6 text-center"></i>
                 </div>
@@ -923,7 +995,7 @@
             </a>
 
             <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank"
-               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-brands fa-linkedin text-xl w-6 text-center"></i>
                 </div>
@@ -931,7 +1003,7 @@
             </a>
 
             <a href="https://github.com/Rudra-G-23" target="_blank"
-               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-brands fa-github text-xl w-6 text-center"></i>
                 </div>
@@ -939,7 +1011,7 @@
             </a>
 
             <a href="tel:+916370874791"
-            class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-solid fa-phone text-xl w-6 text-center"></i>
                 </div>
@@ -947,7 +1019,7 @@
             </a>
 
             <a href="https://kaggle.com/rudraprasadbhuyan" target="_blank"
-               class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-brands fa-kaggle text-xl w-6 text-center"></i>
                 </div>
@@ -955,7 +1027,7 @@
             </a>
 
             <a href="https://www.youtube.com/@Rudra_love_with_data/" target="_blank"
-            class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
+                class="flex items-center gap-3 text-zinc-600 hover:text-blue-600 transition-all group">
                 <div class="p-3 rounded-md bg-zinc-50 group-hover:bg-blue-50 transition-colors">
                     <i class="fa-brands fa-youtube text-xl w-6 text-center"></i>
                 </div>
@@ -970,31 +1042,40 @@
     <!-- ═══════════════════════════════════════════════
          CHATBOT
     ════════════════════════════════════════════════ -->
-    <div id="chatbot-container" class="fixed bottom-6 right-6 z-[100] font-sans opacity-0 pointer-events-none transition-opacity duration-1000">
-        
+    <div id="chatbot-container"
+        class="fixed bottom-6 right-6 z-[100] font-sans opacity-0 pointer-events-none transition-opacity duration-1000">
+
         <!-- Attraction Bubble -->
-        <div id="chatbot-bubble" class="absolute bottom-20 right-0 mb-2 w-56 bg-white border border-zinc-200 shadow-xl rounded-2xl p-3 text-sm text-zinc-700 origin-bottom-right transition-all duration-300 animate-bounce">
+        <div id="chatbot-bubble"
+            class="absolute bottom-20 right-0 mb-2 w-56 bg-white border border-zinc-200 shadow-xl rounded-2xl p-3 text-sm text-zinc-700 origin-bottom-right transition-all duration-300 animate-bounce">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-xl shrink-0">👋</div>
+                <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-xl shrink-0">👋
+                </div>
                 <p class="font-medium">Hi, I am Rudra Assistants!</p>
             </div>
-            <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white border-b border-r border-zinc-200 transform rotate-45"></div>
-            <button onclick="closeChatBubble()" class="absolute top-2 right-2 text-zinc-400 hover:text-zinc-600"><i class="fa-solid fa-xmark"></i></button>
+            <div
+                class="absolute -bottom-2 right-6 w-4 h-4 bg-white border-b border-r border-zinc-200 transform rotate-45">
+            </div>
+            <button onclick="closeChatBubble()" class="absolute top-2 right-2 text-zinc-400 hover:text-zinc-600"><i
+                    class="fa-solid fa-xmark"></i></button>
         </div>
 
         <!-- Floating Button -->
-        <button id="chatbot-toggle" onclick="toggleChat()" class="w-16 h-16 bg-[#5e17eb] text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform relative">
+        <button id="chatbot-toggle" onclick="toggleChat()"
+            class="w-16 h-16 bg-[#5e17eb] text-white rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform relative">
             <img src="assets/artificial-intelligence.png" alt="AI" class="w-9 h-9 object-contain brightness-0 invert">
         </button>
 
         <!-- Chat Modal -->
         <!-- Chat Modal -->
-        <div id="chatbot-modal" class="hidden absolute bottom-24 right-0 w-[85vw] sm:w-[400px] h-[600px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex-col overflow-hidden border border-zinc-100 transition-all duration-300 origin-bottom-right z-[110]">
-            
+        <div id="chatbot-modal"
+            class="hidden absolute bottom-24 right-0 w-[85vw] sm:w-[400px] h-[600px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex-col overflow-hidden border border-zinc-100 transition-all duration-300 origin-bottom-right z-[110]">
+
             <!-- Header -->
             <div class="bg-[#5e17eb] text-white p-4 flex items-center justify-between shadow-md z-10">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm text-xl">
+                    <div
+                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm text-xl">
                         👨‍💻
                     </div>
                     <div>
@@ -1002,10 +1083,12 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 text-xl">
-                    <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link" target="_blank" class="hover:text-white/80 transition-colors" title="Resume">
+                    <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
+                        target="_blank" class="hover:text-white/80 transition-colors" title="Resume">
                         <i class="fa-solid fa-file"></i>
                     </a>
-                    <button onclick="toggleProfileMenu()" class="hover:text-white/80 relative transition-colors" title="Contact/Links">
+                    <button onclick="toggleProfileMenu()" class="hover:text-white/80 relative transition-colors"
+                        title="Contact/Links">
                         <i class="fa-solid fa-phone"></i>
                     </button>
                     <button onclick="toggleChat()" class="hover:text-white/80 transition-colors ml-2">
@@ -1015,46 +1098,83 @@
             </div>
 
             <!-- Profile Links Menu (Hidden by default) -->
-            <div id="profile-menu" class="hidden absolute top-16 right-4 bg-white shadow-xl border border-zinc-100 rounded-xl w-max min-w-[14rem] py-2 z-20 text-zinc-800 text-sm">
-                <div class="px-4 py-2 font-bold text-xs text-zinc-400 uppercase tracking-wider border-b border-zinc-50 mb-1">Contact / Links</div>
-                <a href="https://github.com/Rudra-G-23" target="_blank" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-brands fa-github text-zinc-700 text-lg w-5"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/rudraprasadbhuyan/" target="_blank" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-brands fa-linkedin text-zinc-700 text-lg w-5"></i> LinkedIn</a>
-                <a href="https://www.kaggle.com/rudraprasadbhuyan" target="_blank" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-brands fa-kaggle text-zinc-700 text-lg w-5"></i> Kaggle</a>
-                <a href="https://medium.com/@rudraprasadbhuyan999" target="_blank" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-brands fa-medium text-zinc-700 text-lg w-5"></i> Medium</a>
-                <a href="https://www.youtube.com/@Rudra_love_with_data/" target="_blank" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-brands fa-youtube text-zinc-700 text-lg w-5"></i> YouTube</a>
-                <a href="mailto:rudraprasadbhuyan999@gmail.com" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-solid fa-envelope text-zinc-700 text-lg w-5"></i> rudraprasadbhuyan999@gmail.com</a>
-                <a href="tel:+916370874791" class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i class="fa-solid fa-phone text-zinc-700 text-lg w-5"></i> +916370874791</a>
+            <div id="profile-menu"
+                class="hidden absolute top-16 right-4 bg-white shadow-xl border border-zinc-100 rounded-xl w-max min-w-[14rem] py-2 z-20 text-zinc-800 text-sm">
+                <div
+                    class="px-4 py-2 font-bold text-xs text-zinc-400 uppercase tracking-wider border-b border-zinc-50 mb-1">
+                    Contact / Links</div>
+                <a href="https://github.com/Rudra-G-23" target="_blank"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-brands fa-github text-zinc-700 text-lg w-5"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/rudraprasadbhuyan/" target="_blank"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-brands fa-linkedin text-zinc-700 text-lg w-5"></i> LinkedIn</a>
+                <a href="https://www.kaggle.com/rudraprasadbhuyan" target="_blank"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-brands fa-kaggle text-zinc-700 text-lg w-5"></i> Kaggle</a>
+                <a href="https://medium.com/@rudraprasadbhuyan999" target="_blank"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-brands fa-medium text-zinc-700 text-lg w-5"></i> Medium</a>
+                <a href="https://www.youtube.com/@Rudra_love_with_data/" target="_blank"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-brands fa-youtube text-zinc-700 text-lg w-5"></i> YouTube</a>
+                <a href="mailto:rudraprasadbhuyan999@gmail.com"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-solid fa-envelope text-zinc-700 text-lg w-5"></i> rudraprasadbhuyan999@gmail.com</a>
+                <a href="tel:+916370874791"
+                    class="flex items-center gap-3 px-4 py-2 hover:bg-zinc-50 transition-colors"><i
+                        class="fa-solid fa-phone text-zinc-700 text-lg w-5"></i> +916370874791</a>
             </div>
 
             <!-- Chat Area -->
             <div id="chat-messages" class="flex-1 overflow-y-auto p-4 bg-zinc-50 space-y-4 scroll-smooth">
                 <!-- Default Welcome Message -->
                 <div class="flex items-end gap-2">
-                    <div class="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 p-1 shadow-sm">
+                    <div
+                        class="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 p-1 shadow-sm">
                         <img src="assets/artificial-intelligence.png" alt="AI" class="w-full h-full object-contain">
                     </div>
-                    <div class="bg-white border border-zinc-200 text-zinc-800 rounded-2xl rounded-bl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm prose prose-sm prose-p:my-1 prose-a:text-[#5e17eb]">
-                        <p>Hello! I'm <strong>Rudra Assistant</strong>. How can I help you learn more about Rudra Prasad Bhuyan today?</p>
+                    <div
+                        class="bg-white border border-zinc-200 text-zinc-800 rounded-2xl rounded-bl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm prose prose-sm prose-p:my-1 prose-a:text-[#5e17eb]">
+                        <p>Hello! I'm <strong>Rudra Assistant</strong>. How can I help you learn more about Rudra Prasad
+                            Bhuyan today?</p>
                     </div>
                 </div>
             </div>
 
             <!-- Suggestions / FAQ Keyboard -->
             <div class="bg-white border-t border-zinc-100 p-3 flex flex-wrap gap-2" id="chat-suggestions">
-                <button onclick="sendSuggestion('why i hire rudra')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">why i hire rudra</button>
-                <button onclick="sendSuggestion('Tell me about yourself')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">Tell me about yourself</button>
-                <button onclick="sendSuggestion('What do you do')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What do you do</button>
-                <button onclick="sendSuggestion('Tell me about your projects')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">How can I contact you?</button>
-                <button onclick="sendSuggestion('What technical skills do you have?')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What technical skills do you have?</button>
-                <button onclick="sendSuggestion('What makes you unique')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What makes you unique</button>
-                <button onclick="sendSuggestion('What are your strengths?')" class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What are your strengths?</button>
+                <button onclick="sendSuggestion('why i hire rudra')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">why
+                    i hire rudra</button>
+                <button onclick="sendSuggestion('Tell me about yourself')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">Tell
+                    me about yourself</button>
+                <button onclick="sendSuggestion('What do you do')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What
+                    do you do</button>
+                <button onclick="sendSuggestion('Tell me about your projects')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">How
+                    can I contact you?</button>
+                <button onclick="sendSuggestion('What technical skills do you have?')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What
+                    technical skills do you have?</button>
+                <button onclick="sendSuggestion('What makes you unique')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What
+                    makes you unique</button>
+                <button onclick="sendSuggestion('What are your strengths?')"
+                    class="inline-block bg-zinc-100 text-zinc-700 text-xs font-medium px-3.5 py-2 rounded-full hover:bg-zinc-200 transition-colors shrink-0 border border-zinc-200">What
+                    are your strengths?</button>
             </div>
 
             <!-- Input Area -->
             <div class="p-3 bg-white border-t border-zinc-100">
                 <form id="chat-form" onsubmit="handleChatSubmit(event)" class="flex items-center gap-2">
-                    <input type="text" id="chat-input" placeholder="Type a message..." class="flex-1 bg-zinc-100 text-sm rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5e17eb]/50 transition-all" required>
-                    <button type="submit" class="w-11 h-11 rounded-full bg-[#5e17eb] text-white flex items-center justify-center hover:bg-blue-700 transition-colors shadow-md shrink-0">
+                    <input type="text" id="chat-input" placeholder="Type a message..."
+                        class="flex-1 bg-zinc-100 text-sm rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5e17eb]/50 transition-all"
+                        required>
+                    <button type="submit"
+                        class="w-11 h-11 rounded-full bg-[#5e17eb] text-white flex items-center justify-center hover:bg-blue-700 transition-colors shadow-md shrink-0">
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
                 </form>
@@ -1071,11 +1191,11 @@
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // ── Mobile Menu ───────────────────────────────
-        const mobileMenuBtn     = document.getElementById('mobile-menu-btn');
-        const mobileMenu        = document.getElementById('mobile-menu');
-        const mobileMenuClose   = document.getElementById('mobile-menu-close');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileNavLinks    = document.querySelectorAll('.mobile-nav-link');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
         function toggleMenu(show) {
             if (show) {
@@ -1096,8 +1216,8 @@
             }
         }
 
-        mobileMenuBtn.addEventListener('click',     () => toggleMenu(true));
-        mobileMenuClose.addEventListener('click',   () => toggleMenu(false));
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
         mobileMenuOverlay.addEventListener('click', () => toggleMenu(false));
         mobileNavLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
 
@@ -1151,7 +1271,7 @@
         const chatMessages = document.getElementById('chat-messages');
         const chatInput = document.getElementById('chat-input');
         let isFirstMessage = true;
-        
+
         // Hide profile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (profileMenu && !profileMenu.classList.contains('hidden')) {
@@ -1172,7 +1292,7 @@
                 chatModal.style.bottom = 'auto';
                 chatModal.style.top = '1rem';
                 chatModal.style.maxHeight = 'calc(100dvh - 2rem)';
-                
+
                 // Add a slight delay to scroll to bottom after layout shift
                 setTimeout(() => {
                     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1195,7 +1315,7 @@
         function toggleChat() {
             chatModal.classList.toggle('hidden');
             chatModal.classList.toggle('flex');
-            if(chatBubble && !chatBubble.classList.contains('hidden')) {
+            if (chatBubble && !chatBubble.classList.contains('hidden')) {
                 chatBubble.classList.add('hidden');
             }
         }
@@ -1211,7 +1331,7 @@
         function askBot(query) {
             const chatModal = document.getElementById('chatbot-modal');
             const chatBubble = document.getElementById('chatbot-bubble');
-            
+
             // Open modal if closed
             if (chatModal.classList.contains('hidden')) {
                 chatModal.classList.remove('hidden');
@@ -1221,7 +1341,7 @@
             if (chatBubble && !chatBubble.classList.contains('hidden')) {
                 chatBubble.classList.add('hidden');
             }
-            
+
             // Populate input but don't auto-send
             chatInput.value = query;
             chatInput.focus();
@@ -1235,7 +1355,7 @@
         function addMessage(text, sender) {
             const msgDiv = document.createElement('div');
             msgDiv.className = sender === 'user' ? 'flex items-end gap-2 justify-end' : 'flex items-end gap-2';
-            
+
             let contentHtml = '';
             if (sender === 'user') {
                 contentHtml = `
@@ -1254,7 +1374,7 @@
                     </div>
                 `;
             }
-            
+
             msgDiv.innerHTML = contentHtml;
             chatMessages.appendChild(msgDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1264,16 +1384,16 @@
             e.preventDefault();
             const text = chatInput.value.trim();
             if (!text) return;
-            
+
             chatInput.value = '';
 
             const suggestions = document.getElementById('chat-suggestions');
             if (suggestions && !suggestions.classList.contains('hidden')) {
                 suggestions.classList.add('hidden');
             }
-            
+
             addMessage(text, 'user');
-            
+
             let infoPopup = null;
             if (isFirstMessage) {
                 isFirstMessage = false;
@@ -1282,7 +1402,7 @@
                 infoPopup.innerHTML = '<i class="fa-solid fa-clock text-yellow-500 mr-1"></i> As this is your first message, the server might take some time to wake up and respond. Please be patient!';
                 chatMessages.appendChild(infoPopup);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-                
+
                 setTimeout(() => {
                     if (infoPopup && infoPopup.parentNode) {
                         infoPopup.style.opacity = '0';
@@ -1290,7 +1410,7 @@
                     }
                 }, 20000);
             }
-            
+
             // Typing indicator
             const typingDiv = document.createElement('div');
             typingDiv.id = 'typing-indicator';
@@ -1355,9 +1475,9 @@
                     },
                     body: JSON.stringify({ question: text })
                 });
-                
+
                 const data = await response.json();
-                
+
                 let botText = "No response";
                 if (typeof data === 'string') {
                     botText = data;
@@ -1372,7 +1492,7 @@
                 } else {
                     botText = JSON.stringify(data);
                 }
-                
+
                 if (infoPopup && infoPopup.parentNode) {
                     infoPopup.remove();
                 }
@@ -1397,7 +1517,7 @@
             const container = document.getElementById('intro-animation');
             const chatbotContainer = document.getElementById('chatbot-container');
             let i = 0;
-            
+
             // Disable scrolling while animation is playing
             document.body.style.overflow = 'hidden';
 
@@ -1427,4 +1547,5 @@
     </script>
 
 </body>
+
 </html>
