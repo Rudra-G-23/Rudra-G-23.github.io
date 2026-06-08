@@ -584,141 +584,104 @@
     <section id="experience" class="section-container border-t border-zinc-100">
         <span class="label">Work Experience</span>
 
-        <div class="relative max-w-4xl mx-auto">
+        <div class="flex flex-col gap-6 mt-6 max-w-4xl mx-auto">
 
-            <!-- CENTER LINE -->
-            <div class="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-zinc-200"></div>
-
-            <!-- RIGHT CARD -->
             <!-- SBC Labs -->
-            <div class="relative mb-10">
-                <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2664eb] rounded-full"></div>
-
-                <div
-                    class="exp-card md:ml-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all">
-
-                    <div class="flex items-center">
-                        <div>
-                            <h3 class="font-bold">Jr. Data Scientist</h3>
-                            <p class="text-sm text-zinc-600">SBC Labs</p>
-                            <p class="text-xs text-zinc-400">Nov 2025 – Feb 2026</p>
-                        </div>
-
-                        <div class="ml-auto flex items-center gap-4">
-                            <button onclick="askBot('Tell me about your Work Experience at SBC Labs')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
+            <div class="exp-card border border-zinc-200 rounded-xl p-6 bg-white hover:border-[#2563eb] hover:shadow-[0_0_15px_rgba(37,99,235,0.1)] transition-all group cursor-pointer relative">
+                <div class="flex flex-col md:flex-row justify-between gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-lg font-bold text-zinc-900">SBC Labs</h3>
+                        <p class="text-sm font-medium text-zinc-700">Jr. Data Scientist</p>
+                        <span class="block mt-1 text-zinc-500 text-sm">Nov 2025 – Feb 2026</span>
+                    </div>
+                    <div class="md:w-2/3 flex flex-col md:items-end justify-between">
+                        <p class="text-sm text-zinc-600 md:text-right font-medium">Built ETL pipelines and interactive dashboards for analyzing socioeconomic and healthcare datasets.</p>
+                        
+                        <div class="flex items-center gap-5 mt-4 justify-end">
+                            <button onclick="askBot('Tell me about your Work Experience at SBC Labs'); event.stopPropagation();"
+                                class="hover:scale-110 transition-all z-10 relative flex items-center justify-center p-1 hover:drop-shadow-[0_0_8px_rgba(38,100,235,0.8)]" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain brightness-0 contrast-125">
                             </button>
-                            <button onclick="toggleExp(this)" class="text-[#2664eb]">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
+                            <div class="flex items-center gap-2 text-sm font-bold text-zinc-900 group-hover:text-black transition-colors">
+                                <span>Read more</span>
+                                <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                        <div class="border-t mt-4 pt-4 space-y-2 text-sm text-zinc-600">
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Project I have working <a
-                                        href="https://github.com/Rudra-G-23/rural-financial-inclusion-govt-scheme-recommendation"
-                                        target="_blank" class="text-blue-600 hover:underline font-medium">Fin4Rural
-                                        (Indian Level)</a> | <a href="https://github.com/Rudra-G-23/bihar-viz-dashboard"
-                                        target="_blank" class="text-blue-600 hover:underline font-medium">Bihar
-                                        Dashboard (State Level)</a>.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Developed Python and SQL ETL pipelines for 15 multi-level HCES datasets with 400+
-                                    features to streamline large-scale batch processing.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Analyzed 500+ socioeconomic and healthcare variables to identify trends in finance,
-                                    healthcare, consumption, and savings behavior.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Automated data validation and duplicate-handling workflows using SQL procedures,
-                                    reducing data inconsistencies by 20%.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Built reusable data preprocessing scripts in Python, reducing manual
-                                    model-preparation effort and saving ~1 hour daily.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Designed scalable system architecture, PRD documentation, and 30+ analytical reports
-                                    to standardize workflows and business planning.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Built interactive KPI dashboards across 50+ parameters and collaborated with
-                                    stakeholders to deliver actionable insights and summaries.</p>
-                            </div>
-
+                <div class="exp-details max-h-0 overflow-hidden group-hover:max-h-[800px] transition-all duration-700 ease-in-out">
+                    <div class="border-t mt-5 pt-4 space-y-3 text-sm text-zinc-600">
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Project I have working <a href="https://github.com/Rudra-G-23/rural-financial-inclusion-govt-scheme-recommendation" target="_blank" class="text-zinc-900 underline font-medium relative z-10">Fin4Rural (Indian Level)</a> | <a href="https://github.com/Rudra-G-23/bihar-viz-dashboard" target="_blank" class="text-zinc-900 underline font-medium relative z-10">Bihar Dashboard (State Level)</a>.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Developed Python and SQL ETL pipelines for <strong>15</strong> multi-level HCES datasets with <strong>400+</strong> features to streamline large-scale batch processing.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Analyzed <strong>500+</strong> socioeconomic and healthcare variables to identify trends in finance, healthcare, consumption, and savings behavior.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Automated data validation and duplicate-handling workflows using SQL procedures, reducing data inconsistencies by <strong>20%</strong>.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Built reusable data preprocessing scripts in Python, reducing manual model-preparation effort and saving ~<strong>1</strong> hour daily.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Designed scalable system architecture, PRD documentation, and <strong>30+</strong> analytical reports to standardize workflows and business planning.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Built interactive KPI dashboards across <strong>50+</strong> parameters and collaborated with stakeholders to deliver actionable insights and summaries.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- LEFT CARD -->
             <!-- Tata Power -->
-            <div class="relative mb-10">
-                <div class="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2664eb] rounded-full"></div>
-
-                <div
-                    class="exp-card md:mr-[55%] ml-0 mt-4 md:mt-0 border border-zinc-200 rounded-xl p-5 bg-white hover:shadow-lg hover:border-[#2664eb] transition-all text-left md:text-right">
-
-                    <div class="flex items-center md:flex-row-reverse">
-                        <div>
-                            <h3 class="font-bold">Quality Analyst</h3>
-                            <p class="text-sm text-zinc-600">Tata Power WODL</p>
-                            <p class="text-xs text-zinc-400">June 2025 – July 2025</p>
-                        </div>
-
-                        <div class="ml-auto md:ml-0 md:mr-auto flex items-center md:flex-row-reverse gap-4">
-                            <button onclick="toggleExp(this)" class="text-[#2664eb]">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+            <div class="exp-card border border-zinc-200 rounded-xl p-6 bg-white hover:border-[#2563eb] hover:shadow-[0_0_15px_rgba(37,99,235,0.1)] transition-all group cursor-pointer relative">
+                <div class="flex flex-col md:flex-row justify-between gap-6">
+                    <div class="md:w-1/3">
+                        <h3 class="text-lg font-bold text-zinc-900">Tata Power WODL</h3>
+                        <p class="text-sm font-medium text-zinc-700">Quality Analyst</p>
+                        <span class="block mt-1 text-zinc-500 text-sm">June 2025 – July 2025</span>
+                    </div>
+                    <div class="md:w-2/3 flex flex-col md:items-end justify-between">
+                        <p class="text-sm text-zinc-600 md:text-right font-medium">Monitored smart meter data workflows and collaborated with field operations teams.</p>
+                        
+                        <div class="flex items-center gap-5 mt-4 justify-end">
+                            <button onclick="askBot('Tell me about your Work Experience at Tata Power'); event.stopPropagation();"
+                                class="hover:scale-110 transition-all z-10 relative flex items-center justify-center p-1 hover:drop-shadow-[0_0_8px_rgba(38,100,235,0.8)]" title="Ask AI">
+                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain brightness-0 contrast-125">
                             </button>
-                            <button onclick="askBot('Tell me about your Work Experience at Tata Power')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
+                            <div class="flex items-center gap-2 text-sm font-bold text-zinc-900 group-hover:text-black transition-colors">
+                                <span>Read more</span>
+                                <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="exp-details max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                        <div class="border-t mt-4 pt-4 space-y-2 text-sm text-zinc-600 text-left">
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Observed and analyzed smart meter data workflows for 60,000+ consumers, centralized
-                                    database operations and issue-tracking processes.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Assisted in field-to-database survey operations with a 20-member team, supporting
-                                    digital meter updates, and complaint-handling workflows.</p>
-                            </div>
-
-                            <div class="flex items-start gap-2">
-                                <span class="w-1 h-1 mt-2 bg-[#2664eb] rounded-full flex-shrink-0"></span>
-                                <p>Gained exposure to image-processing and grid monitoring systems used to identify
-                                    human errors, detect irregularities operational planning.</p>
-                            </div>
-
+                <div class="exp-details max-h-0 overflow-hidden group-hover:max-h-[800px] transition-all duration-700 ease-in-out">
+                    <div class="border-t mt-5 pt-4 space-y-3 text-sm text-zinc-600 text-left">
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Observed and analyzed smart meter data workflows for <strong>60,000+</strong> consumers, centralized database operations and issue-tracking processes.</p>
                         </div>
-
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Assisted in field-to-database survey operations with a <strong>20</strong>-member team, supporting digital meter updates, and complaint-handling workflows.</p>
+                        </div>
+                        <div class="flex items-start gap-2.5">
+                            <span class="w-1.5 h-1.5 mt-1.5 bg-[#2664eb] rounded-full flex-shrink-0"></span>
+                            <p>Gained exposure to image-processing and grid monitoring systems used to identify human errors, detect irregularities operational planning.</p>
+                        </div>
                     </div>
                 </div>
             </div>
