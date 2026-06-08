@@ -137,6 +137,26 @@
             box-shadow: 0 0 0 1px #2563eb;
         }
 
+        /* ─── Social Pills ──────────────────────────── */
+        .social-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            color: #52525b;
+            /* zinc-600 */
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .social-pill:hover {
+            color: #2563eb;
+            /* blue-600 */
+            background-color: #f4f4f5;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -223,42 +243,51 @@
     ════════════════════════════════════════════════ -->
     <header id="about" class="section-container pt-32 pb-16">
 
-        <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8">
+        <div class="mb-8">
             <img src="assets/profile-pic.jpeg" alt="Rudra Prasad Bhuyan"
-                class="w-32 h-32 rounded-lg object-cover border border-zinc-200" />
-            <div>
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Rudra Prasad Bhuyan</h1>
-                <p class="text-xl text-zinc-600 font-medium">Aspiring Data Scientist | ML Engineer</p>
+                class="w-24 h-24 rounded-full object-cover border border-zinc-200 mb-6 shadow-sm" />
+
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mb-4">Rudra Prasad Bhuyan</h1>
+
+            <p class="text-lg text-zinc-600 mb-8">
+                AI & Data Scientist who loves Finance & Business.
+            </p>
+
+            <div class="max-w-xl text-zinc-600 leading-relaxed mb-8 space-y-4">
+                <p>
+                    Machine Learning Engineer with hands-on experience in data analysis, machine learning, and
+                    end-to-end
+                    project execution.
+                </p>
+                <p>
+                    Focused on practical, system thinking solutions — not just models. I solve real problems using data.
+                </p>
+            </div>
+
+            <div class="flex items-center flex-wrap gap-3">
+                <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
+                    target="_blank" class="social-pill" title="Resume">
+                    <i class="fa-solid fa-file-lines text-xl"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank" class="social-pill"
+                    title="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+
+                <a href="https://github.com/Rudra-G-23" target="_blank" class="social-pill" title="GitHub">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+
+                <a href="mailto:rudra.p.bhuyan@gmail.com" class="social-pill" title="Email">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </a>
+
+                <span
+                    class="ml-2 px-3 py-1 bg-white text-zinc-600 text-xs font-mono rounded-full border border-zinc-200 shadow-sm">v2.0.0</span>
             </div>
         </div>
 
-        <div class="max-w-xl text-zinc-600 leading-relaxed mb-8">
-            <p class="mb-4">
-                Machine Learning Engineer with hands-on experience in data analysis, machine learning, and end-to-end
-                project execution.
-            </p>
-            <p>Focused on practical, system thinking solutions — not just models. I solve real problems using data.</p>
-        </div>
-
-        <div class="flex flex-wrap gap-4">
-
-            <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
-                target="_blank"
-                class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-2.5 rounded-md font-bold transition-all duration-300 shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i class="fa-solid fa-file-lines"></i> Resume
-            </a>
-
-            <a href="https://github.com/Rudra-G-23" target="_blank"
-                class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-
-            <a href="https://linkedin.com/in/rudra-prasad-bhuyan-44a388235/" target="_blank"
-                class="inline-flex items-center gap-2 border border-zinc-200 px-5 py-2.5 rounded-md font-medium transition-all duration-300 hover:bg-zinc-50 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-500/20">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-
-        </div>
     </header>
 
 
@@ -1018,8 +1047,7 @@
     <!-- ═══════════════════════════════════════════════
          CHATBOT
     ════════════════════════════════════════════════ -->
-    <div id="chatbot-container"
-        class="fixed bottom-6 right-6 z-[100] font-sans">
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-[100] font-sans">
 
         <!-- Attraction Bubble -->
         <div id="chatbot-bubble"
