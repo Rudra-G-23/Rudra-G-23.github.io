@@ -131,10 +131,150 @@
             transform: rotate(180deg);
         }
 
+        /* ─── Project Cards ──────────────────────────── */
+        .project-card {
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
         .project-card:hover {
             border-color: #2563eb;
-            /* blue-600 */
-            box-shadow: 0 0 0 1px #2563eb;
+            box-shadow: 0 8px 32px rgba(37, 99, 235, 0.13);
+            transform: translateY(-3px);
+        }
+
+        /* Image tilt container */
+        .project-img-wrap {
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background: #f4f4f5;
+            margin-top: 1rem;
+            perspective: 800px;
+        }
+
+        .project-img-wrap img {
+            width: 100%;
+            display: block;
+            transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.45s ease;
+            transform-origin: center bottom;
+            will-change: transform;
+        }
+
+        .project-card:hover .project-img-wrap img {
+            transform: perspective(600px) rotateX(5deg) scale(1.03);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Bottom action row */
+        .project-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #f4f4f5;
+        }
+
+        .project-view-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #2563eb;
+            text-decoration: none;
+            transition: gap 0.2s ease, opacity 0.2s ease;
+        }
+
+        .project-view-link:hover {
+            gap: 0.6rem;
+            opacity: 0.8;
+        }
+
+        .project-ai-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #f4f4f5;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-ai-btn:hover {
+            background: #e0e7ff;
+            transform: scale(1.12);
+        }
+
+        /* ─── Project Info Button & Details ─────────── */
+        .project-info-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #f4f4f5;
+            color: #71717a;
+            font-size: 0.85rem;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-info-btn:hover {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .project-info-btn.active {
+            background: #eff6ff;
+            color: #2563eb;
+            transform: rotate(20deg) scale(1.08);
+        }
+
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.3s ease,
+                        margin-top 0.3s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        .project-details.open {
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 0.75rem;
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding: 0.75rem;
+            margin: 0;
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            border: 1px solid #e4e4e7;
+            space-y: 0.4rem;
+        }
+
+        .project-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: #52525b;
+            padding: 0.2rem 0;
+        }
+
+        .project-details li::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #2563eb;
+            flex-shrink: 0;
+            margin-top: 0.35rem;
         }
 
         /* ─── Social Pills ──────────────────────────── */
@@ -653,322 +793,201 @@
         <span class="label">Featured Projects</span>
         <div class="grid md:grid-cols-2 gap-6">
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 1: Vehicle Insurance ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">Vehicle Insurance Risk Prediction</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">End-to-end MLOps pipeline predicting vehicle insurance risk in real time.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">Python • Flask • AWS • Docker</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/vehicle-insurance-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/vehicle-insurance-project.png" alt="Vehicle Insurance" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">Vehicle Insurance Risk Prediction</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        Insurance companies need to estimate vehicle risk to reduce loss and price policies correctly.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        Python • Flask • AWS • Docker
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" target="_blank"
-                            class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the Vehicle Insurance Risk Prediction project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the Vehicle Insurance Risk Prediction project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Built end-to-end MLOps pipeline</li>
-                            <li>• Integrated MongoDB + AWS</li>
-                            <li>• CI/CD with GitHub Actions & Docker</li>
-                            <li>• Flask app for real-time prediction</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Built end-to-end MLOps pipeline with CI/CD via GitHub Actions & Docker</li>
+                        <li>Integrated MongoDB for data ingestion and AWS S3 for model storage</li>
+                        <li>Flask web app provides real-time insurance risk predictions</li>
+                        <li>Automated model training, evaluation, and deployment workflows</li>
+                    </ul>
                 </div>
             </div>
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 2: SQL Data Warehouse ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">SQL Modern Data Warehouse</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">Medallion architecture ETL pipeline unifying ERP & CRM data for analytics.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">PostgreSQL • SQL • ETL • Star Schema • Power BI</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/data-warehouse-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/data-warehouse-project.png" alt="Data Warehouse" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">SQL Modern Data Warehouse</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        ERP & CRM data was inconsistent and not ready for analytics and reporting.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        PostgreSQL • SQL • ETL • Star Schema • Power BI
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" target="_blank"
-                            class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the SQL Modern Data Warehouse project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the SQL Modern Data Warehouse project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Built Medallion architecture (Bronze–Silver–Gold) for data transformation.</li>
-                            <li>• Developed ETL pipelines integrating ERP & CRM systems.</li>
-                            <li>• Created analytical reports for sales and customer insights.</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Built Medallion architecture (Bronze → Silver → Gold) for data transformation</li>
+                        <li>Developed ETL pipelines integrating ERP & CRM systems into PostgreSQL</li>
+                        <li>Designed Star Schema for optimized analytical queries</li>
+                        <li>Created Power BI reports for sales performance and customer insights</li>
+                    </ul>
                 </div>
             </div>
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 3: Yelp Big Data ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">Yelp Big Data Analysis</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">High-performance Polars pipeline processing millions of Yelp records without memory issues.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">Python • Polars • JSON • Parquet</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/yelp-data-analysis-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/yelp-data-analysis-project.png" alt="Yelp Big Data" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">Yelp Big Data Analysis</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        Handling large Yelp JSON datasets efficiently without memory issues.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        Python • Polars • JSON • Parquet
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" target="_blank"
-                            class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the Yelp Big Data Analysis project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://github.com/Rudra-G-23/yelp-bigdata-capstone" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the Yelp Big Data Analysis project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Built high-performance pipeline using Polars.</li>
-                            <li>• Converted JSON to Parquet for optimized storage.</li>
-                            <li>• Performed large-scale data analysis workflows.</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Built high-performance pipeline using Polars — 5–10× faster than Pandas</li>
+                        <li>Converted raw JSON to Parquet format for optimized columnar storage</li>
+                        <li>Performed large-scale analysis on business reviews, check-ins & tips</li>
+                        <li>Identified top business categories and sentiment patterns across cities</li>
+                    </ul>
                 </div>
             </div>
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 4: Breast Cancer ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">Breast Cancer Prediction App</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">Real-time tumor classification app built with Logistic Regression and Streamlit.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">Python • Scikit-learn • Streamlit</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/cancer-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/cancer-project.png" alt="Breast Cancer App" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">Breast Cancer Prediction App</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        Need for real-time tumor classification using medical diagnostic features.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        Python • Scikit-learn • Streamlit
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" target="_blank"
-                            class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the Breast Cancer Prediction App project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://github.com/Rudra-G-23/breast-cancer-prediction-app/" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the Breast Cancer Prediction App project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Built ML model using Logistic Regression.</li>
-                            <li>• Developed interactive Streamlit web app.</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Built Logistic Regression model achieving high accuracy on diagnostic features</li>
+                        <li>Interactive Streamlit web app with real-time probability output</li>
+                        <li>Features include radar chart visualization for feature comparison</li>
+                        <li>Trained on the Wisconsin Breast Cancer Dataset (569 samples)</li>
+                    </ul>
                 </div>
             </div>
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 5: Transportation Dashboard ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">Transportation & Logistic Dashboard</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">Power BI dashboard analyzing logistics efficiency, delays, and supplier performance.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">Power BI • KPI Development</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/transport-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/transport-project.png" alt="Transport Dashboard" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">Transportation & Logistic Dashboard</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        Analyze logistics efficiency to reduce delays and operational costs.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        Power BI • KPI Development
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41"
-                            target="_blank" class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the Transportation & Logistic Dashboard project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/submission/81e1ac66467d6f463c194685d5246b41" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the Transportation & Logistic Dashboard project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Designed dashboard analyzing supplier & customer performance.</li>
-                            <li>• Identified delay trends and key inefficiencies.</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Designed KPI dashboard tracking on-time delivery, delays & costs</li>
+                        <li>Analyzed supplier vs customer performance across 3 shipping modes</li>
+                        <li>Identified top delay contributors and operational inefficiencies</li>
+                        <li>Submitted for ZoomCharts Power BI challenge — recognized as top entry</li>
+                    </ul>
                 </div>
             </div>
 
-            <div
-                class="project-card border border-zinc-200 rounded-xl overflow-hidden hover:shadow-xl transition-all bg-white">
+            <!-- ── Card 6: Smart Transaction Ledger ── -->
+            <div class="project-card border border-zinc-200 rounded-xl p-5 bg-white">
+                <h3 class="text-base font-bold text-zinc-900">Smart Transaction Ledger</h3>
+                <p class="text-sm text-zinc-500 mt-1 leading-snug">AI-powered financial transaction cleaner with fraud detection and real-time SQL queries.</p>
+                <p class="text-xs text-zinc-400 mt-2 font-mono">Python • FastAPI • AI • SQL</p>
 
-                <!-- BIG IMAGE -->
-                <img src="assets/project/smart-ledger-analytics-dashboard-project.png" class="w-full h-48 object-cover">
+                <div class="project-img-wrap">
+                    <img src="assets/project/smart-ledger-analytics-dashboard-project.png" alt="Smart Ledger" class="h-40 w-full object-cover">
+                </div>
 
-                <div class="p-4">
-
-                    <!-- TITLE -->
-                    <h3 class="text-lg font-bold">Smart Transaction Ledger</h3>
-
-                    <!-- PROBLEM -->
-                    <p class="text-sm text-zinc-500 mt-2">
-                        Smart Transaction Ledger is an AI-powered financial transaction cleaner and fraud detector.
-                    </p>
-
-                    <!-- TOOLS -->
-                    <p class="text-xs text-zinc-400 mt-2">
-                        Python • FastAPI • AI • SQL
-                    </p>
-
-                    <!-- ACTION ROW -->
-                    <div class="flex justify-between items-center mt-4">
-
-                        <a href="https://github.com/Rudra-G-23/smart-transaction-ledger" target="_blank"
-                            class="text-sm font-semibold text-blue-600 hover:underline">
-                            View Project →
-                        </a>
-
-                        <div class="flex items-center gap-4">
-                            <button onclick="askBot('Tell me about the Smart Transaction Ledger project')"
-                                class="hover:scale-110 transition-transform" title="Ask AI">
-                                <img src="assets/artificial-intelligence.png" alt="AI" class="w-5 h-5 object-contain">
-                            </button>
-                            <button onclick="toggleDetails(this)">
-                                <i class="fa-solid fa-chevron-down transition-transform"></i>
-                            </button>
-                        </div>
-
+                <div class="project-actions">
+                    <a href="https://github.com/Rudra-G-23/smart-transaction-ledger" target="_blank" class="project-view-link">
+                        View <span>→</span>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInfo(this)" class="project-info-btn" title="More info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                        <button onclick="askBot('Tell me about the Smart Transaction Ledger project')" class="project-ai-btn" title="Ask AI">
+                            <img src="assets/artificial-intelligence.png" alt="AI" class="w-4 h-4 object-contain">
+                        </button>
                     </div>
-
-                    <!-- EXPAND CONTENT -->
-                    <div class="details hidden mt-4 text-sm text-zinc-600">
-                        <ul class="space-y-2">
-                            <li>• Automated Data Cleaning</li>
-                            <li>• Fraud Detection & Monitoring</li>
-                            <li>• AI Chatbot Assistant</li>
-                            <li>• Real-Time SQL Queries</li>
-                            <li>• Interactive Dashboard</li>
-                        </ul>
-                    </div>
-
+                </div>
+                <div class="project-details">
+                    <ul>
+                        <li>Automated data cleaning with validation rules and duplicate detection</li>
+                        <li>Fraud detection & real-time monitoring with alert system</li>
+                        <li>AI chatbot assistant for natural language SQL queries</li>
+                        <li>Interactive analytics dashboard with FastAPI backend</li>
+                    </ul>
                 </div>
             </div>
 
@@ -1508,6 +1527,26 @@
                 }
                 document.getElementById('typing-indicator').remove();
                 addMessage('Sorry, I encountered an error connecting to the server.', 'bot');
+            }
+        }
+
+        /* ─── Project Info Toggle ─────────────────── */
+        function toggleInfo(btn) {
+            const card = btn.closest('.project-card');
+            const details = card.querySelector('.project-details');
+            const isOpen = details.classList.contains('open');
+
+            // Close all other open panels first
+            document.querySelectorAll('.project-details.open').forEach(el => {
+                el.classList.remove('open');
+                const otherBtn = el.closest('.project-card').querySelector('.project-info-btn');
+                if (otherBtn) otherBtn.classList.remove('active');
+            });
+
+            // Toggle current
+            if (!isOpen) {
+                details.classList.add('open');
+                btn.classList.add('active');
             }
         }
 
