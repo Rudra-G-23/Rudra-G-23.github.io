@@ -296,6 +296,48 @@
             background-color: #f4f4f5;
             transform: translateY(-2px);
         }
+
+        /* ─── Skill Groups ──────────────────────────── */
+
+        .skill-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-group-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #a1a1aa;
+            margin-bottom: 0.625rem;
+            display: block;
+        }
+
+        .skill-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #e4e4e7;
+            background: #fff;
+            font-size: 0.8125rem;
+            color: #3f3f46;
+            transition: border-color 0.2s ease, background 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .skill-pill:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .skill-pill i {
+            font-size: 0.75rem;
+            color: #2563eb;
+        }
+
     </style>
 </head>
 
@@ -403,6 +445,17 @@
                 </p>
             </div>
 
+            <!-- Status pills -->
+            <div class="flex flex-wrap items-center gap-2 mb-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-100">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
+                    Open to opportunities
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-50 text-zinc-500 text-xs font-medium border border-zinc-200">
+                    📍 India &nbsp;·&nbsp; Remote friendly
+                </span>
+            </div>
+
             <div class="flex items-center flex-wrap gap-3">
                 <a href="https://drive.google.com/drive/folders/1GtkJX0WEAIot308foQCXqSThmjiJYBjk?usp=drive_link"
                     target="_blank" class="social-pill" title="Resume">
@@ -430,150 +483,82 @@
     </header>
 
 
+
     <!-- ═══════════════════════════════════════════════
          SKILLS
     ════════════════════════════════════════════════ -->
     <section id="skills" class="section-container border-t border-zinc-100">
-        <span class="label">Skills & Expertise</span>
+        <span class="label">Skills &amp; Expertise</span>
 
-        <div class="flex flex-wrap gap-3 mt-4">
+        <div class="space-y-5 mt-2">
 
-            <!-- Languages -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-code text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Python, SQL</span>
+            <!-- Group: Languages & Dev Tools -->
+            <div class="skill-group">
+                <span class="skill-group-label">Languages &amp; Dev Tools</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-code"></i> Python, SQL</span>
+                    <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git, GitHub</span>
+                    <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> Jupyter, VS Code</span>
+                    <span class="skill-pill"><i class="fa-solid fa-server"></i> FastAPI, Pydantic</span>
+                </div>
             </div>
 
-            <!-- Data Analysis -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-chart-line text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Pandas, NumPy</span>
+            <!-- Group: Data Analysis & Visualization -->
+            <div class="skill-group">
+                <span class="skill-group-label">Data Analysis &amp; Visualization</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> Pandas, NumPy</span>
+                    <span class="skill-pill"><i class="fa-solid fa-chart-pie"></i> Plotly, Matplotlib, Seaborn</span>
+                    <span class="skill-pill"><i class="fa-solid fa-chalkboard-user"></i> Power BI, Looker Studio</span>
+                </div>
             </div>
 
-            <!-- Visualization -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-chart-pie text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Plotly, Matplotlib, Seaborn</span>
+            <!-- Group: Machine Learning & Statistics -->
+            <div class="skill-group">
+                <span class="skill-group-label">Machine Learning &amp; Statistics</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-brain"></i> Scikit-learn, XGBoost, CatBoost</span>
+                    <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> PyTorch, TensorFlow, Keras</span>
+                    <span class="skill-pill"><i class="fa-solid fa-clock"></i> Time Series, PCA</span>
+                    <span class="skill-pill"><i class="fa-solid fa-dice-six"></i> Probability, Statistical Modeling</span>
+                    <span class="skill-pill"><i class="fa-solid fa-square-root-variable"></i> Hypothesis Testing, A/B Testing</span>
+                    <span class="skill-pill"><i class="fa-solid fa-sliders"></i> Hyperparameter Tuning</span>
+                </div>
             </div>
 
-            <!-- Dashboard -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-chalkboard-user text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Power BI, Looker Studio</span>
+            <!-- Group: GenAI & LLMs -->
+            <div class="skill-group">
+                <span class="skill-group-label">GenAI &amp; LLMs</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-robot"></i> LLMs, Groq, Llama, Claude, HuggingFace</span>
+                    <span class="skill-pill"><i class="fa-solid fa-circle-nodes"></i> LangChain, LangGraph, LangSmith</span>
+                    <span class="skill-pill"><i class="fa-solid fa-gears"></i> MLflow, CI/CD</span>
+                </div>
             </div>
 
-            <!-- Machine Learning -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-brain text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Scikit-learn, XGBoost, CatBoost</span>
+            <!-- Group: Data Engineering & Cloud -->
+            <div class="skill-group">
+                <span class="skill-group-label">Data Engineering &amp; Cloud</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-database"></i> PySpark, Polars</span>
+                    <span class="skill-pill"><i class="fa-solid fa-cloud"></i> AWS</span>
+                    <span class="skill-pill"><i class="fa-solid fa-layer-group"></i> PostgreSQL, Snowflake, BigQuery, Databricks</span>
+                </div>
             </div>
 
-            <!-- MLOps -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-gears text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> GitHub, MLflow, CI/CD</span>
-            </div>
-
-            <!-- Backend -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-server text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Pydantic, FastAPI</span>
-            </div>
-
-            <!-- Big Data -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-database text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> PySpark, Polars</span>
-            </div>
-
-            <!-- Cloud -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-cloud text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> AWS</span>
-            </div>
-
-            <!-- Warehousing -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-layer-group text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> PostgreSQL, Snowflake, BigQuery, Databricks</span>
-            </div>
-
-            <!-- Deep Learning -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-network-wired text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> PyTorch, TensorFlow, Keras</span>
-            </div>
-
-            <!-- GenAI -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-robot text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> LLMs, ChatGPT, Groq, Llama, Claude, HuggingFace</span>
-            </div>
-
-            <!-- GenAI Tool -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-circle-nodes text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> LangChain, LangGraph, LangSmith</span>
-            </div>
-
-            <!-- Stats -->
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-dice-six text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-700"> Probability, Statistical Modeling</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-square-root-variable text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Hypothesis Testing, A/B Testing</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-laptop-code text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Git, Jupyter Notebook, VS Code</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-clock text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Time Series Forecasting, PCA</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-sliders text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Hyperparameter Tuning</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-people-group text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Storytelling, Stakeholder Communication</span>
-            </div>
-
-            <div
-                class="flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 hover:shadow-md transition-all">
-                <i class="fa-solid fa-person-hiking text-[#2664eb]"></i>
-                <span class="text-sm text-zinc-600"> Problem Solving, Analytical Thinking</span>
+            <!-- Group: Soft Skills -->
+            <div class="skill-group">
+                <span class="skill-group-label">Soft Skills</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-pill"><i class="fa-solid fa-people-group"></i> Storytelling, Stakeholder Communication</span>
+                    <span class="skill-pill"><i class="fa-solid fa-person-hiking"></i> Problem Solving, Analytical Thinking</span>
+                </div>
             </div>
 
         </div>
     </section>
+
+
 
 
     <!-- ═══════════════════════════════════════════════
