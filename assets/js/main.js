@@ -67,7 +67,15 @@ const chatModal = document.getElementById('chatbot-modal');
 const chatBubble = document.getElementById('chatbot-bubble');
 const chatMessages = document.getElementById('chat-messages');
 const chatInput = document.getElementById('chat-input');
+const chatStartupNotice = document.getElementById('chatbot-startup-notice');
 let isFirstMessage = true;
+
+// Bounce the attraction bubble a few times, then hide it automatically.
+if (chatBubble) {
+    chatBubble.addEventListener('animationend', () => {
+        chatBubble.classList.add('hidden');
+    });
+}
 
 // ── Mobile Keyboard: pin modal to top to prevent input being hidden ──
 chatInput.addEventListener('focus', () => {
@@ -106,7 +114,10 @@ function toggleChat() {
     if (chatBubble && !chatBubble.classList.contains('hidden')) {
         chatBubble.classList.add('hidden');
     }
-    if (opening) chatInput.focus();
+    if (opening) {
+        chatInput.focus();
+        if (chatStartupNotice) chatStartupNotice.classList.remove('hidden');
+    }
 }
 
 function closeChatBubble() {
@@ -118,6 +129,7 @@ function askBot(query) {
         chatModal.classList.remove('hidden');
         chatModal.classList.add('flex');
         document.getElementById('chatbot-toggle').setAttribute('aria-expanded', 'true');
+        if (chatStartupNotice) chatStartupNotice.classList.remove('hidden');
     }
     if (chatBubble && !chatBubble.classList.contains('hidden')) {
         chatBubble.classList.add('hidden');

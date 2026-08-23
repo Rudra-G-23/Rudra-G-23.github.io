@@ -378,6 +378,18 @@ html[data-theme="dark"] .bg-blue-50 { background-color: rgba(37, 99, 235, 0.12) 
 html[data-theme="dark"] .bg-white\/80 { background-color: rgba(10, 10, 12, 0.8) !important; }
 html[data-theme="dark"] .bg-white\/20 { background-color: rgba(255, 255, 255, 0.1) !important; }
 
+/* Chat bubble attracts attention with a few bounces, then stops (see main.js
+   which hides the bubble once this animation finishes). */
+@keyframes chatbot-bubble-bounce {
+    0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.chatbot-bubble-bounce {
+    animation: chatbot-bubble-bounce 1s infinite;
+    animation-iteration-count: 3;
+}
+
 /* Tailwind Typography plugin sets its own dark-agnostic color variables on
    .prose (used in chat bubbles); remap the ones actually visible there. */
 html[data-theme="dark"] .prose {
