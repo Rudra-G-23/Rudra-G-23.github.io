@@ -1,4 +1,39 @@
 TYPE: [OPEN SOURCE PROJECT]
+Name: Traccia
+Type: Open Source Observability Product
+Description:
+Rudra Prasad Bhuyan contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
+Problem:
+Teams running AI and data pipelines need consistent, vendor-neutral tracing and metrics to understand latency and API performance across services.
+Solution:
+Traccia builds on OpenTelemetry to give teams a standard way to instrument, collect, and inspect traces and metrics from their systems.
+Technologies Used:
+Rudra works with OpenTelemetry and Python as part of contributing to Traccia.
+Key Features:
+- Rudra contributes to an OpenTelemetry-based tracing and metrics pipeline.
+- The product is open source and maintained by algen.ai.
+- It is used to monitor user-flow latency and API performance across production pipelines.
+
+TYPE: [OPEN SOURCE PROJECT]
+Name: Qwen2.5-Coder-0.5B Python FIM Fine-Tune
+Type: Open Source Model and Dataset
+Description:
+Rudra Prasad Bhuyan fine-tuned Qwen2.5-Coder-0.5B for Python Fill-in-the-Middle (FIM) code completion and published the model and the training dataset on Hugging Face.
+Problem:
+Small code-completion models need clean, task-specific Fill-in-the-Middle data to perform well on Python completion.
+Solution:
+Rudra manually curated a Python-only FIM dataset from The Stack v3, a 133TB source corpus, using custom filtering and processing, then fine-tuned the model on it.
+Technologies Used:
+Rudra used Python, Hugging Face, LLM fine-tuning, and Fill-in-the-Middle training for this work.
+Key Features:
+- Rudra curated a Python-only FIM dataset from a 133TB source corpus.
+- Rudra fine-tuned Qwen2.5-Coder-0.5B for Python code completion.
+- Both the model and the dataset are published openly on Hugging Face.
+- The work is part of a research paper Rudra is co-authoring with a PhD researcher at IIT.
+Project Links:
+Hugging Face: https://huggingface.co/Rudra-G-23
+
+TYPE: [OPEN SOURCE PROJECT]
 Name: show-file-tree
 Type: Open Source CLI Tool
 Description:
@@ -23,17 +58,18 @@ TYPE: [OPEN SOURCE PROJECT]
 Name: find-my-joint
 Type: Open Source Data Utility
 Description:
-Rudra Prasad Bhuyan created 'find-my-joint', a highly useful data utility designed to automatically identify potential join keys across multiple pandas DataFrames.
+Rudra Prasad Bhuyan created 'find-my-joint', a Python package that profiles 400+ columns across 15-level datasets and automatically recommends high-confidence join keys.
 Problem:
 For data scientists, manually finding matching columns between large, unfamiliar datasets is highly time-consuming and heavily error-prone.
 Solution:
-Rudra developed an automated tool that intelligently scans multiple DataFrames, analyzes their contents, and suggests the best possible join keys automatically.
+Rudra developed an automated tool that scans multiple DataFrames, analyzes their contents, and suggests the best possible join keys, reaching about 90% matching accuracy in under two minutes.
 Technologies Used:
 Rudra utilized Python and the Pandas library to develop this open source data engineering utility.
 Key Features:
 - Rudra's utility automatically detects matching columns and data types across multiple diverse datasets.
-- The tool drastically simplifies the complex data merging and joining process for data engineers.
-- It significantly reduces the manual effort and time required in the initial stages of data analysis.
+- It profiles 400+ columns across 15-level datasets and recommends high-confidence joins with roughly 90% matching accuracy in under two minutes.
+- It includes an interactive network graph visualization so users can explore dataset relationships.
+- It drastically reduces the manual effort and time required in the initial stages of data analysis.
 Project Links:
 GitHub: https://github.com/Rudra-G-23/Find-My-Joint
 Documentation: https://rudra-g-23.github.io/Find-My-Joint/

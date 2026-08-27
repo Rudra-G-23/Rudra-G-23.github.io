@@ -1,4 +1,23 @@
 TYPE: [WORK EXPERIENCE]
+Organization: algen.ai
+Duration: June 2026 – Present
+Designation: AI/ML Engineer
+
+RESPONSIBILITIES AT ALGEN.AI:
+Rudra built an AI Interview Platform for a confidential client end-to-end, covering LLM-based interview question generation, real-time audio processing, and cost-optimized inference.
+Rudra designed 12 structured databases using a Star Schema so the LLM could generate up to 15 relevant, non-repetitive interview questions per request.
+Rudra designed chunk-based audio processing at 50 words per 25-second chunk, routing chunks between faster and slower models and a real-time API to balance latency and accuracy.
+Rudra reduced resume-analysis cost to ₹0.13 per student, making it possible to analyze around 100 students for about ₹13 in total.
+Rudra built a dedicated monitoring database to track user-flow latency and API performance across the whole pipeline.
+Rudra contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
+Rudra guides a 4-person team on a revenue-pipeline optimization project using an aviation dataset of roughly 60 to 110 GB, advising on data handling strategy, feature engineering, and model training approach.
+
+KEY CONTRIBUTIONS AT ALGEN.AI:
+Rudra owns production ML pipelines and client-facing AI products rather than just prototypes.
+Rudra combines LLM engineering, real-time audio processing, and cost optimization in a single deployed system.
+Rudra mentors other engineers, turning large and messy datasets into production-ready systems.
+
+TYPE: [WORK EXPERIENCE]
 Organization: SBC LABS
 Duration: November 2025 – February 2026
 Designation: Jr. Data Scientist
@@ -9,7 +28,7 @@ Rudra analyzed 500+ socioeconomic and healthcare variables to identify trends in
 Rudra automated data validation and duplicate-handling workflows using SQL procedures, reducing data inconsistencies by 20%.
 Rudra built reusable data preprocessing scripts in Python, reducing manual model-preparation effort and saving ~1 hour daily.
 Rudra designed scalable system architecture, PRD documentation, and 30+ analytical reports to standardize workflows and business planning.
-Rudra built interactive KPI dashboards across 50+ parameters and collaborated with stakeholders to deliver actionable insights and summaries
+Rudra built interactive KPI dashboards across 50+ parameters and collaborated with stakeholders to deliver actionable insights and summaries.
 
 
 ACHIEVEMENTS AT SBC LABS:
@@ -30,7 +49,10 @@ Duration: June 2025 – July 2025
 Designation: Quality Analyst
 
 KEY CONTRIBUTIONS AT TATA POWER WODL:
-Rudra Observed and analyzed smart meter data workflows for 60,000+ consumers, centralized database operations and issue-tracking processes.
-Rudra Assisted in field-to-database survey operations with a 20-member team, supporting digital meter updates, and complaint-handling workflows.
-Rudra Gained exposure to image-processing and grid monitoring systems used to identify human errors, detect irregularities operational planning.
+Rudra observed and analyzed smart meter data workflows for 60,000+ consumers, along with centralized database operations and issue-tracking processes.
+Rudra assisted in field-to-database survey operations with a 20-member team, supporting digital meter updates and complaint-handling workflows.
+Rudra gained exposure to image-processing and grid-monitoring systems used to detect irregularities and support operational planning.
 
+TYPE: [EDUCATION]
+Rudra Prasad Bhuyan studied at Utkalmani Gopabandhu Institute of Engineering from 2023 to 2026, earning a Diploma in Electrical Engineering.
+Before that, Rudra studied Science at a Government Autonomous College from 2020 to 2022.

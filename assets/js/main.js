@@ -189,6 +189,9 @@ async function handleChatSubmit(e) {
 
     addMessage(text, 'user');
 
+    // The cold-start banner is only relevant until the first request goes out.
+    if (chatStartupNotice) chatStartupNotice.classList.add('hidden');
+
     let infoPopup = null;
     if (isFirstMessage) {
         isFirstMessage = false;

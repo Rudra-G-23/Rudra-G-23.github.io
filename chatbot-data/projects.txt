@@ -1,4 +1,43 @@
 TYPE: [PROJECT]
+Name: Fine-Tuning a Code LLM for Python Fill-in-the-Middle Completion
+Type: LLM / Research Project
+Description:
+Rudra Prasad Bhuyan is fine-tuning a code language model for Python Fill-in-the-Middle (FIM) completion, in collaboration with a PhD researcher at IIT, with a research paper in progress.
+Problem:
+Small code-completion models need clean, Python-specific Fill-in-the-Middle training data, which does not exist in ready-to-use form.
+Solution:
+Rudra manually curated a Python-only FIM training dataset from The Stack v3, a 133TB source corpus, through custom filtering and processing, then fine-tuned a model on it.
+Technologies Used:
+Rudra utilized Python, Hugging Face, Qwen2.5-Coder-0.5B, LLM fine-tuning, and Fill-in-the-Middle (FIM) training for this project.
+Key Features:
+- Rudra curated a Python-only FIM dataset from a 133TB source corpus using custom filtering.
+- Rudra fine-tuned Qwen2.5-Coder-0.5B for Python code completion.
+- Rudra published the model and the dataset on Hugging Face.
+- Rudra is co-authoring a research paper on this work with a PhD researcher at IIT.
+Project Link:
+https://huggingface.co/Rudra-G-23
+
+
+TYPE: [PROJECT]
+Name: find-my-joint (Python Package)
+Type: Data Engineering / Open Source Project
+Description:
+Rudra Prasad Bhuyan built find-my-joint, a Python package that profiles 400+ columns across 15-level datasets and recommends high-confidence joins.
+Problem:
+Manually finding join keys across large, unfamiliar, multi-level datasets is slow and error-prone for data scientists.
+Solution:
+Rudra built an automated tool that analyzes many DataFrames and recommends join keys with about 90% matching accuracy in under two minutes.
+Technologies Used:
+Rudra utilized Python and Pandas for this data engineering package.
+Key Features:
+- Rudra's package profiles 400+ columns across 15-level datasets automatically.
+- It recommends high-confidence joins with roughly 90% matching accuracy in under two minutes.
+- It includes an interactive network graph visualization to help users explore dataset relationships.
+Project Link:
+https://github.com/Rudra-G-23/Find-My-Joint
+
+
+TYPE: [PROJECT]
 Name: Vehicle Insurance Risk Prediction
 Type: Machine Learning Project
 Description:
@@ -13,7 +52,7 @@ Key Features:
 - Rudra designed an end-to-end MLOps pipeline for continuous training and deployment.
 - Rudra implemented CI/CD practices using GitHub Actions and Docker containerization.
 - Rudra created a real-time prediction API using Flask.
-- Rudra integrated MongoDB for database management and AWS services for cloud hosting.
+- Rudra integrated MongoDB for database management and AWS services (S3 and EC2) for cloud hosting.
 Project Link:
 https://github.com/Rudra-G-23/vehicle-insurance-risk-prediction-mlops/
 
@@ -30,9 +69,9 @@ Rudra architected a structured, reliable data warehouse using robust ETL pipelin
 Technologies Used:
 Rudra utilized PostgreSQL, SQL, advanced ETL methodologies, and Power BI for this data engineering project.
 Key Features:
-- Rudra implemented a Medallion data architecture consisting of Bronze (raw), Silver (cleaned), and Gold (analytics-ready) layers.
-- Rudra built comprehensive ETL pipelines for seamless data integration from multiple sources.
-- Rudra developed analytical reporting dashboards in Power BI to provide actionable business insights.
+- Rudra implemented a 3-layer Medallion architecture with Bronze (raw), Silver (cleaned), and Gold (analytics-ready) layers.
+- Rudra built end-to-end ETL pipelines that integrate ERP and CRM data into a scalable star schema model.
+- Rudra developed interactive Power BI dashboards to visualize customer behavior, product performance, and sales trends.
 Project Link:
 https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project
 
@@ -41,17 +80,17 @@ TYPE: [PROJECT]
 Name: Yelp Big Data Analysis
 Type: Big Data Project
 Description:
-Rudra Prasad Bhuyan successfully analyzed massive Yelp datasets efficiently, overcoming significant memory constraints and processing bottlenecks.
+Rudra Prasad Bhuyan built an out-of-core analysis pipeline to analyze more than 7 million Yelp reviews across 150,346 businesses without memory bottlenecks.
 Problem:
 Handling extremely large JSON datasets often causes critical memory crashes and severe performance issues in standard environments.
 Solution:
-Rudra employed highly efficient big data processing techniques and modern libraries to manage, transform, and analyze the large-scale Yelp data.
+Rudra used Polars with lazy execution and Parquet optimization to manage, transform, and analyze the large-scale Yelp data efficiently.
 Technologies Used:
 Rudra utilized Python, Polars, JSON, and Parquet for this big data capstone project.
 Key Features:
-- Rudra achieved highly efficient data processing by utilizing the Polars library instead of standard tools.
-- Rudra optimized system memory usage to prevent out-of-memory errors during execution.
-- Rudra converted raw JSON data into the highly compressed and optimized Parquet format.
+- Rudra analyzed 7M+ Yelp reviews across 150,346 businesses using an out-of-core pipeline.
+- Rudra improved large-scale data processing performance by 2 to 11 times over Pandas.
+- Rudra converted raw JSON data into the highly compressed and optimized Parquet format and used lazy execution.
 Project Link:
 https://github.com/Rudra-G-23/yelp-bigdata-capstone
 

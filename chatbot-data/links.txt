@@ -1,8 +1,13 @@
 TYPE: [CONTACT/LINKS]
 If you need to contact Rudra Prasad Bhuyan or view his work online, you can use the following professional profiles and contact links.
 
+Rudra Prasad Bhuyan is based in Rourkela, Odisha, India, and works as an AI/ML Engineer at algen.ai.
+
 Rudra Prasad Bhuyan's GitHub Profile (for exploring his code repositories, open source contributions, and technical projects):
 https://github.com/Rudra-G-23
+
+Rudra Prasad Bhuyan's Hugging Face Profile (for his fine-tuned models and datasets, including the Qwen2.5-Coder Python FIM work):
+https://huggingface.co/Rudra-G-23
 
 Rudra Prasad Bhuyan's LinkedIn Profile (for professional networking, career updates, and business inquiries):
 https://www.linkedin.com/in/rudraprasadbhuyan/
