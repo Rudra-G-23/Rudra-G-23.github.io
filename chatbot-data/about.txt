@@ -1,10 +1,18 @@
 TYPE: [ABOUT]
-Rudra Prasad Bhuyan is an aspiring data scientist and machine learning engineer who is deeply passionate about data-driven problem solving.
+Rudra Prasad Bhuyan is an AI/ML Engineer at algen.ai, where he builds production machine learning pipelines and client-facing AI products.
 
-Rudra has extensive hands-on experience in data analysis, machine learning, and building end-to-end data science projects that deliver real-world value.
+Rudra is based in Rourkela, Odisha, India, and comes from a strong data analytics background spanning Python, SQL, Polars, and Power BI.
 
-Instead of just building theoretical models, Rudra focuses on solving practical real-world problems using data.
+At algen.ai, Rudra delivered a complete AI Interview Platform for a confidential client, covering the real-time audio pipeline, LLM-based question generation, and cost-optimized inference.
 
-Rudra prefers system thinking, ensuring his practical solutions can be effectively deployed and used in real production applications.
+Rudra also contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
+
+Independently, Rudra fine-tuned a large language model for Python code completion using a dataset he curated himself from a 133TB source corpus.
+
+Rudra is experienced at translating large, messy datasets into working production systems, and he mentors other engineers through that process.
+
+Instead of building only theoretical models, Rudra focuses on solving practical, real-world problems with data.
+
+Rudra prefers system thinking, making sure his solutions can actually be deployed and used in real production applications.
 
 Rudra is driven by a passion for understanding data, engineering efficient pipelines, and applying artificial intelligence to solve complex business challenges.

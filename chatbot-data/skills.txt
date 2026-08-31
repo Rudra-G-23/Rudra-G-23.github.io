@@ -1,30 +1,26 @@
 TYPE: [SKILLS]
-Rudra Prasad Bhuyan has strong programming skills in Python and SQL, which form the foundation of his data science work.
+Rudra Prasad Bhuyan works as an AI/ML Engineer, and his core programming languages are Python and SQL.
 
-In data processing and analysis, Rudra works extensively with libraries such as Pandas, NumPy, and Polars to manipulate and clean datasets.
+In ML and LLM engineering, Rudra works with Scikit-learn, regression, classification, and time series forecasting, and he has hands-on experience with LLM fine-tuning, Fill-in-the-Middle (FIM) training, and prompt and pipeline optimization.
 
-For data visualization and reporting, Rudra uses tools including Plotly, Power BI, Matplotlib, and Seaborn to communicate insights effectively.
+Rudra also has practical experience with XGBoost for gradient-boosted models, and with deep learning frameworks including PyTorch and TensorFlow.
 
-In the field of Machine Learning, Rudra has practical experience building predictive models using Scikit-learn and XGBoost.
+For data manipulation and processing, Rudra works extensively with Pandas, NumPy, Polars, and PySpark to clean and transform datasets at scale.
 
-Rudra has worked with deep learning frameworks including PyTorch and TensorFlow for advanced AI and neural network applications.
+For data visualization and BI, Rudra uses Power BI, Excel, Matplotlib, Seaborn, Plotly, Streamlit, and Looker to communicate insights.
 
-Rudra has knowledge of Large Language Models (LLMs) and actively works with AI frameworks like LangChain and Hugging Face.
+For databases and warehousing, Rudra works with PostgreSQL, BigQuery, Snowflake, Amazon Redshift, Databricks, and MongoDB, and he designs Star Schema data models.
 
-For building APIs and deploying models, Rudra has experience with backend tools such as FastAPI, Flask, and Pydantic.
+In observability, Rudra works with OpenTelemetry and contributes to Traccia, algen.ai's open-source observability product.
 
-Rudra is familiar with big data tools and formats, including PySpark, JSON, and Parquet, which allow him to handle large-scale datasets efficiently.
+Rudra works with Large Language Models and AI frameworks such as Hugging Face, LangChain, LangGraph, and LangSmith for building agents and autonomous tools.
 
-Rudra is familiar with tools which is helps to build the agents, autonomous tools he know LangChain, LangGraph, LangSmith.
+For building APIs and deploying models, Rudra uses backend tools such as FastAPI, Flask, and Pydantic.
 
-Rudra has practical experience deploying and managing projects on cloud platforms like Amazon Web Services (AWS) and using Docker for containerization.
+Rudra has a strong statistics and analytics foundation, including probability, hypothesis testing, A/B testing, and exploratory data analysis (EDA).
 
-Rudra has hands-on experience working with modern databases and data warehouses, including PostgreSQL, MongoDB, Snowflake, BigQuery, and Databricks.
+Rudra also knows advanced analytical techniques including time series forecasting, Principal Component Analysis (PCA), and hyperparameter tuning.
 
-Rudra possesses a strong mathematical foundation, understanding probability, statistical modeling, hypothesis testing, and A/B testing.
+Rudra uses industry-standard development and MLOps tools such as Git, GitHub, GitHub Actions, MLflow, Docker, AWS (S3 and EC2), Jupyter Notebook, and VS Code.
 
-Rudra has knowledge of advanced analytical techniques, including time series forecasting, Principal Component Analysis (PCA), and hyperparameter tuning.
-
-Rudra uses industry-standard development and MLOps tools such as Git, GitHub Actions, MLflow, Jupyter Notebook, and VS Code.
-
-Beyond technical skills, Rudra has strong problem-solving abilities, excellent analytical thinking, and effective stakeholder communication skills, allowing him to bridge the gap between technical data and business needs.
+Beyond technical skills, Rudra has strong problem-solving ability, analytical thinking, and stakeholder communication skills, and he mentors engineers while bridging the gap between technical data and business needs.

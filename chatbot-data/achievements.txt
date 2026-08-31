@@ -1,6 +1,16 @@
 TYPE: [ACHIEVEMENTS]
-Rudra's successful deployment of end-to-end machine learning pipelines, his creation of robust data engineering warehouses.
+Rudra Prasad Bhuyan delivered a complete AI Interview Platform end-to-end for a confidential client at algen.ai, covering LLM-based question generation, real-time audio processing, and cost-optimized inference.
 
-Rudra publication of open-source CLI utilities/ python libraries stand as major professional achievements. 
+Rudra reduced resume-analysis cost to ₹0.13 per student, making it possible to analyze about 100 students for roughly ₹13 in total.
 
-Rudra Prasad Bhuyan continues to achieve highly impactful results through his independent project work and his role as a Data Scientist at SBC LABS.
+Rudra independently fine-tuned Qwen2.5-Coder-0.5B for Python Fill-in-the-Middle code completion on a dataset he curated from The Stack v3, a 133TB source corpus, and published both the model and the dataset on Hugging Face.
+
+Rudra is co-authoring a research paper on that fine-tuning work with a PhD researcher at IIT.
+
+Rudra contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
+
+Rudra has published open-source CLI utilities and Python libraries, including show-file-tree and find-my-joint.
+
+Rudra has successfully deployed end-to-end machine learning pipelines and built robust data engineering warehouses.
+
+Rudra continues to achieve high-impact results through his independent project work and his role as an AI/ML Engineer at algen.ai.
