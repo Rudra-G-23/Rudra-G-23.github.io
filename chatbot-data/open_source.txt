@@ -1,4 +1,33 @@
 TYPE: [OPEN SOURCE PROJECT]
+Name: Open-Source Contributions
+Type: Open-Source Contributions Portfolio
+Description:
+Rudra Prasad Bhuyan maintains a public record of contributions to external open-source projects, covering new skills, documentation improvements, issue templates, and bug fixes.
+Key Contributions:
+- Created TrajWeave, a local-first learning loop that imports Codex and Claude Code sessions, converts them into normalized trajectories, and supports evidence-backed human review of policy improvements.
+- Added a data-analysis warehouse skill to agentic-awesome-skills.
+- Improved Traccia documentation, including a changelog update, issue template, and documentation fixes.
+- Updated documentation for Awesome OpenTelemetry.
+- Contributed a bug fix to LangSmith SDK.
+Project Links:
+GitHub: https://github.com/Rudra-G-23/open-source-contributions/
+
+TYPE: [OPEN SOURCE PROJECT]
+Name: TrajWeave
+Type: Open Source Coding-Agent Learning Tool
+Description:
+Rudra Prasad Bhuyan created TrajWeave, a local-first learning loop for coding-agent work. It imports Codex and Claude Code sessions, turns them into normalized trajectories, extracts evidence-backed experiences, and proposes policy improvements for human review.
+Key Features:
+- Processes only repositories explicitly registered by the user and keeps data local.
+- Preserves links to evidence through the trajectory, experience, review, evaluation, and lifecycle stages.
+- Requires review, preview, and explicit approval before applying a policy change.
+Technologies Used:
+Python, CLI tooling, coding-agent trajectory analysis, local-first data processing.
+Project Links:
+PyPI: https://pypi.org/project/trajweave/
+GitHub: https://github.com/Rudra-G-23/TrajWeave
+
+TYPE: [OPEN SOURCE PROJECT]
 Name: Traccia
 Type: Open Source Observability Product
 Description:

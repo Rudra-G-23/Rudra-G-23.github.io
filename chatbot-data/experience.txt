@@ -1,6 +1,6 @@
 TYPE: [WORK EXPERIENCE]
 Organization: algen.ai
-Duration: June 2026 – Present
+Duration: June 2026 - Oct 2026
 Designation: AI/ML Engineer
 
 RESPONSIBILITIES AT ALGEN.AI:
@@ -11,11 +11,16 @@ Rudra reduced resume-analysis cost to ₹0.13 per student, making it possible to
 Rudra built a dedicated monitoring database to track user-flow latency and API performance across the whole pipeline.
 Rudra contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
 Rudra guides a 4-person team on a revenue-pipeline optimization project using an aviation dataset of roughly 60 to 110 GB, advising on data handling strategy, feature engineering, and model training approach.
+Rudra built a Talk-to-Data application for the airline industry, using RAG to retrieve relevant tables, columns, and relationships from internal company documents.
+Rudra implemented hybrid retrieval with semantic search and BM25 keyword matching to supply grounded context to a Text-to-SQL model.
+Rudra designed a three-model workflow for question understanding and clarification, fine-tuned Text-to-SQL generation, and SQL-to-natural-language responses.
+Rudra created a 400-sample golden dataset to benchmark the Talk-to-Data system.
 
 KEY CONTRIBUTIONS AT ALGEN.AI:
 Rudra owns production ML pipelines and client-facing AI products rather than just prototypes.
 Rudra combines LLM engineering, real-time audio processing, and cost optimization in a single deployed system.
 Rudra mentors other engineers, turning large and messy datasets into production-ready systems.
+Rudra evaluates AI systems with curated, domain-specific benchmark datasets.
 
 TYPE: [WORK EXPERIENCE]
 Organization: SBC LABS
