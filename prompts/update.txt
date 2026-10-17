@@ -1,0 +1,21 @@
+- add opensource contribution work 
+github contribution https://github.com/Rudra-G-23/open-source-contributions/
+
+
+
+---
+this are few work i done in algen ai company so you can asked more questions to 
+have idea so you can update the /home/rudra/test/Rudra-G-23.github.io/chatbot-data/experience.txt
+
+Yes, I have experience integrating existing AI models into real-world applications.
+
+I worked on a Talk-to-Data project for the airline industry, where I implemented RAG to retrieve relevant tables, columns, and relationships from internal company documents.
+
+I also built retrieval pipelines using semantic search and BM25 for exact keyword matching to provide better context to the Text-to-SQL model.
+
+The project used three separate models:
+- A model to understand and clarify user questions.
+- A fine-tuned Text-to-SQL model.
+- A model to convert SQL into natural language.
+
+In same project to benchmark the model I also created the golden datasets of 400 samples.
