@@ -7,10 +7,10 @@ Rudra independently fine-tuned Qwen2.5-Coder-0.5B for Python Fill-in-the-Middle 
 
 Rudra is co-authoring a research paper on that fine-tuning work with a PhD researcher at IIT.
 
-Rudra contributes to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
+Rudra contributed to Traccia, algen.ai's open-source OpenTelemetry-based observability product.
 
 Rudra has published open-source CLI utilities and Python libraries, including show-file-tree and find-my-joint.
 
 Rudra has successfully deployed end-to-end machine learning pipelines and built robust data engineering warehouses.
 
-Rudra continues to achieve high-impact results through his independent project work and his role as an AI/ML Engineer at algen.ai.
+Rudra continues to achieve high-impact results through independent project work and his prior AI/ML Engineer role at algen.ai.
